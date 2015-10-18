@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<style type="text/css">
+    .side {
+        margin: 200px auto;
+    }
+</style>
+<body>
+    <div class="side">
+        <ul>
+            <li><img src="img1.png" alt=""></li>
+            <li><img src="img2.png" alt=""></li>
+            <li><img src="img3.png" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="tlsilde.js"></script>
+<script type="text/javascript">
+    $('.side').tlsilde({
+        beforeTurn: function(ele){
+           /* console.log(ele);*/
+        }
+    });
+</script>
+</html>
