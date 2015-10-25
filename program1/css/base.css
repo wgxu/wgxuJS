@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* Reset
+---------------------------------------------------------------------*/
+ html, body{
+    height: 100%;
+}
+body, div, p,
+dl, dt, dd, ul, ol,
+h1, h2, h3, h4, h5, h6, 
+form {
+	margin: 0;
+	padding: 0;
+}
+body, div,span, p,
+dl, dt, dd, ul, ol,
+h1, h2, h3, h4, h5, h6, 
+form,img,abbr,em,i,ins,ol,ul,section{
+	-webkit-tap-highlight-color: transparent;
+}
+img, abbr {
+	border: none;
+}
+cite, em, i, ins {
+	font-style: normal;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+a:hover {
+	color: #333;
+}
+body {
+	font: 16px/150% arial,helvetica,sans-serif;
+	color: #666;
+	word-break: break-all;
+}
+
+/*********************   common css   ******************************/
+a {
+	color: #252525;
+	text-decoration: none;
+	outline-style: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,.1);
+}
+a:hover {
+	text-decoration: none;
+}
+a img {
+	border: 0;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear { 
+	clear: both;
+}
+.tl {
+	text-align: left;
+}
+.tc {
+	text-align: center;
+}
+.db {
+	display: block;
+}
+.dlb { 
+	display: inline-block;
+}
+.ell {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

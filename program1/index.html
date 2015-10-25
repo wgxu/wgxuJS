@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appDemo">
+<head>
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+    <div class="wrap clearfix">
+      <h3 class="process-title center">新闻发布系统angular demo</h3>
+      <div class="menu fl">
+        <p class="center"><a href="#/">新闻列表</a></p>
+        <p class="center"><a href="#/add">发布新闻</a></p>
+      </div>
+      <div class="frame fl" ng-view>
+      </div>
+    </div>
+</body>
+<script src="./plugin/angular.min.js"></script>
+<script src="./plugin/angular-route.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/controller/mainController.js"></script>
+<script src="./js/service/mainService.js"></script>
+<script src="./js/filter/mainFilter.js"></script>
+</html>
