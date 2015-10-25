@@ -1,0 +1,5 @@
+图片轮播插件
+重点：
+1.js中Interval定时器的使用
+2.轮播的经典布局，position:relative  的布局方式。
+3.jQuery.fn 原型链的理解
