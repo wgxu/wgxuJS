@@ -1,0 +1,77 @@
+@charset("utf-8");
+
+/*分类栏*/
+.typelist{
+	padding-left:2%;
+	width: 98%;
+	height: 60px;
+	border-bottom: 1px dotted #DDDDDD;
+}
+.typelist a{
+	margin: 0 2px;
+	float: left;
+	display: block;
+	padding:10px 20px;
+	color: #000;
+}
+.typelist a:hover,.typelist .typelist-seclected{
+	background-color: #2D58B9;
+	color: #fff;
+}
+/*教程内容*/
+.course-content{
+	width: 100%;
+	min-height: 420px;
+}
+
+/*内容项*/
+.content-list{
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px dotted #DDDDDD;
+}
+/*用户信息*/
+.userinfo{
+	float: left;
+	margin:10px 0;
+	width: 60px;
+	height: 80px;
+}
+.user-img,.user-img  img{
+	width: 60px;
+	height: 60px;
+}
+.userinfo h6{
+	padding-top: 2px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	height: 18px;
+}
+/*文章*/
+.article{
+	float: left;
+	margin:10px;
+	width: 880px;
+	height: 80px;
+	
+}
+.article h4 a{
+	display: inline-block;
+	text-overflow:ellipsis;
+	max-width: 880px;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #000;
+}
+.article h4 a:hover{
+	color: #0055AA;
+}
+.article  p{
+	text-indent: 2em;
+	max-width: 880px;
+	height: 62px;
+	color: #999999;
+	font-size: 13px;
+	overflow: hidden;
+}

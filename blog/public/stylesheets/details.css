@@ -1,0 +1,165 @@
+@charset("utf8");
+/*发帖或者返回*/
+.zoo1{
+	width: 100%;
+	height: 70px;
+}
+.left{
+	display: inline-block;
+	margin:15px 40px;
+	width: 80px;
+	height: 40px;
+}
+.left .fabiao{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	background-color: #3C8BCF;
+	color: #fff;
+}
+.right{
+	display: inline-block;
+	margin-top: 15px;
+	padding-top: 10px;
+	width: 80px;
+	height: 30px;
+	float: right;
+	border: 1px solid #DDDDDD;
+}
+.right a, .right a:hover{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	color: #000;
+	text-align: center;
+}
+ a:hover{
+ 	text-decoration: underline;
+ }
+/*内容以及评论*/
+.zoo2{
+	margin-top: 10px;
+	width: 100%;
+}
+
+.pingluntable{
+	width: 960px;
+	border-top:  1px solid #CDCDCD;
+	border-left:  1px solid #CDCDCD;
+	/*height: 600px;*/
+}
+.pingluntable  th, .pingluntable td{
+	border-right: 1px solid #CDCDCD;
+	border-bottom: 1px solid #CDCDCD;
+}
+
+.pingluntable .th1{
+	width: 160px;
+	height: 40px;
+	font-weight: normal;
+	font-size: 13px;
+	text-align: center;
+	background-color: #E5EDF2;
+	border-bottom: 5px solid #C2D5E3;
+}
+.pingluntable .th2{
+	height: 40px;
+	padding-left: 20px;
+	text-align: left;
+	border-bottom: 5px solid #E5EDF2;
+}
+.replynum{
+	margin-left: 5px;
+	color:#F2310A;
+}
+
+
+/*评论楼层*/
+.pingluntable td{
+	height: 200px;
+}
+.pingluntable .louzhu{
+	height: 300px;
+}
+/*用户栏*/
+.tableleft{
+	vertical-align: top;
+	background-color: #E5EDF2;
+}
+.user-name{
+	padding:10px;
+	width: 140px;	
+	height: 20px;
+	font-size: 13px;
+	font-weight: bold;
+	border-bottom: 1px dashed #CDCDCD;	
+}
+.user-img{
+	padding:10px;
+	width: 140px;
+	height: 139px;
+}
+/*表格右侧*/
+.tableright{
+	vertical-align: top;
+}
+/*发表日期*/
+.pubdate{
+	margin:0 10px;
+	padding: 10px;
+	padding-left: 26px;
+	width: 724px;
+	height: 20px;
+	font-size: 13px;
+	background: url("../images/online_member.gif") no-repeat 5px 10px;
+	border-bottom: 1px dashed #CDCDCD;	
+}
+.pubdate span{
+	margin-left: 5px;
+}
+
+/*发表内容*/
+.pubcontent{
+	margin:0 15px;
+	width:  770px;
+}
+
+
+/*回复栏*/
+.replyquestion{
+	width: 958px;
+	height: 220px;
+	border:1px solid #CDCDCD;
+}
+.replyquestion-left{
+	float: left;
+	width: 164px;
+	height: 220px;
+	border-right: 1px solid #CDCDCD;
+	background-color: #E5EDF2;
+}
+
+/*右边栏*/
+.replyquestion-right{
+	float: left;
+	width: 793px;
+	height: 220px;
+}
+.editor-bor{
+	margin:20px 0 0 20px;
+	width: 650px;
+	height: 150px;
+}
+
+/*发送按钮*/
+.replysubmit{
+	margin:10px 0 0 20px;
+	padding-top: 5px;
+	width: 80px;
+	height: 25px;
+	cursor: pointer;
+	color:#fff;
+	font-size: 13px;
+	text-align: center;
+	background-color: #3C8BCF;
+}

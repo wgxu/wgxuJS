@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/details.css">
+    <title>前端博客</title>
+</head>
+<body>
+<div class="top">
+    <!-- logo -->
+    <div class="logo">前端开发博客</div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul class="firstlist">
+                <li class="firstlist-li">
+                    <a href="/" class="nav-name">首页 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/course" class="nav-name">教程 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/question" class="nav-name">问问</a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/share" class="nav-name">分享</a>
+                </li>
+            </ul>
+        </div>
+        <% if(user.username){ %>
+            <div class="welcome">
+                <span id="userName"><a href="javascript:;" class="namelink"><%= user.name %></a></span>,欢迎您
+                <a href="/out" style="padding-left:10px;">退出</a>
+            </div>
+        <% } %>
+</div>
+<!-- 详情页 -->
+<div class="webapp">
+    <!-- 发帖或者返回 -->
+    <div class="zoo1">
+        <span class="left">
+            <input type="button" value="提问" class="fabiao">
+        </span>
+        <%if(type =="1") {%>
+            <span class="right"><a href="/share">返回列表</a></span>
+        <%}else{%>
+            <span class="right"><a href="/question">返回列表</a></span>
+        <%}%>
+        
+    </div>
+
+    <!-- 内容以及评论 -->
+    <div class="zoo2">
+         <table cellspacing="0" class="pingluntable"> 
+            <tr>
+                <th class="th1">回复数：<span class="replynum">xxx</span></th>
+                <th class="th2"><%=detailData.title%></th>
+            </tr>
+
+            <tr class="louzhu">
+                <td class="tableleft">
+                    <!-- 用户名字 -->
+                    <div class="user-name"><%=detailData.author%></div>
+
+                    <div  class="user-img">
+                    <img src="../Images/userico/wgxu.png" >
+                    </div>
+                </td>
+
+                <td  class="tableright">
+                    <!-- 发表日期 -->
+                    <div class="pubdate">发表于<span><%=detailData.datetime%></span></div>
+
+                    <!-- 发表内容 -->
+                    <div class="pubcontent"><%=detailData.content%></div>
+                </td>
+            </tr>
+        </table> 
+    </div>
+
+    <!-- 发帖链接 -->
+    <div class="zoo1">
+        <span class="left">
+            <input type="button" value="提问" class="fabiao">
+        </span>
+        <%if(type =="1") {%>
+            <span class="right"><a href="/share">返回列表</a></span>
+        <%}else{%>
+            <span class="right"><a href="/question">返回列表</a></span>
+        <%}%>
+    </div>
+
+    <!-- 回复栏 -->
+    <div class="replyquestion">
+        <!-- 左边空栏 -->
+        <div class="replyquestion-left"></div>
+        <!-- 右边栏 -->
+        <div class="replyquestion-right">
+            <!-- 富文本框 -->
+            <div class="editor-bor">
+                <script type="text/plain" id="myEditor" class="myEditor"></script>
+            </div>
+            <!-- 发送按钮 -->
+            <div class="replysubmit">发送回复</div>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>
+</body>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/ueditor/ueditor.config.js"></script>
+<script src="/javascripts/ueditor/ueditor.all.min.js"></script>
+</html>

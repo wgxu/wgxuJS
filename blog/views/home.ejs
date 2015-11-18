@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 加载css -->
+    <link rel="stylesheet" href="./stylesheets/base.css">
+    <link rel="stylesheet" href="./stylesheets/common.css">
+    <link rel="stylesheet" href="./stylesheets/home.css">
+    <link rel="stylesheet" href="./stylesheets/flexslider.css">
+    <title>前端博客</title>
+</head>
+<body>
+    <div class="top">
+    <!-- logo -->
+    <div class="logo">前端开发博客</div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul class="firstlist">
+                <li class="firstlist-li">
+                    <a href="/" class="nav-name nav-name-selected">首页 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/course" class="nav-name">教程 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/question" class="nav-name">问问</a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/share" class="nav-name">分享</a>
+                </li>
+            </ul>
+        </div>
+        <% if(user.username){ %>
+            <div class="welcome">
+                <span id="userName"><a href="javascript:;" class="namelink"><%= user.name %></a></span>,欢迎您
+                <a href="/out" style="padding-left:10px;">退出</a>
+            </div>
+        <% } %>
+    </div>
+    <!-- 首页内容 -->
+    <div class="webapp">
+        <!-- blog帖数提示 -->
+        <div class="blogtips">
+        <span class="tip-img"></span>
+        <span>最新统计:本站会员<b><%= siteInfo.users%></b>位，<b><%= siteInfo.carsdsum%></b>帖子，<b><%= siteInfo.sovled%></b>问题被解决！</span>
+
+        </div>
+
+        <!-- 区域二，轮播和站内搜索 -->
+        <div class="zoo2">
+            <!-- 轮播-->
+            <div class="lunbo">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li><img src="/images/home/1.png"></li>
+                        <li><img src="/images/home/2.png"></li>
+                        <li><img src="/images/home/1.png"></li>
+                        <li><img src="/images/home/2.png"></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 站内搜索和动态更新 -->
+            <div class="search-update">
+                <!-- 搜索 -->
+                <div class="web-search">
+                    <div class="web-search-left">
+                        <input type="text" class="search-text">
+                    </div>
+                    <div class="web-search-right">搜索</div>
+                </div>
+
+                <!-- 登录框 -->
+                <div class="login">
+                    <div class="row row1">
+                        <span>帐号 :</span>
+                        <input type="text" class="input-info" id="User">
+                    </div>
+
+                    <div class="row row1">
+                        <span>密码 :</span>
+                        <input type="password"  class="input-info" id="userPwd">
+                    </div> 
+
+                    <div  class="row">
+                        <input type="button"  class="login-but"  value ="登录"> 
+                        <input type="button" class="register" value="注册"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 区域三，各种内容链接 -->
+        <div class="zoo3">
+            <!-- 精华帖子 -->
+            <div class="tiezi">
+                <div class="title">
+                    <h3 class="name">精帖分享</h3>
+                    <span><a href="/share">更多..</a></span>
+                </div>
+
+                <!-- 帖子 -->
+                <div class="tiezicontent">
+                    <% if(cardData.length){ %>
+                    <ul class="tiezilist">
+                       <% cardData.forEach(function(data){ %>
+                           <li>
+                               <a href="/sharedetail?id=<%=data.id%>" class="zoo3-link" title="<%= data.title %>"><%= data.title %></a>
+                           </li>
+                       <% }) %>
+                    </ul>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- 教程下载 -->
+            <div class="jiaocheng">
+                <div class="title">
+                    <h3 class="name">教程下载</h3>
+                    <span><a href="/course">更多..</a></span>
+                </div>
+
+                <!-- 帖子 -->
+                <div class="tiezicontent">
+                    <% if(courseData.length){ %>
+                       <ul class="tiezilist">
+                            <% courseData.forEach(function(curse){ %>
+                                <li>
+                                    <a href="/coursedetail?id=<%=curse.id%>" class="zoo3-link" title="<%=curse.title%>"><%=curse.title%></a>
+                                </li>
+                            <% }) %>
+                       </ul> 
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- 常见问题解答 -->
+            <div class="questionlist">
+                <div class="title">
+                    <h3 class="name">常见问题解答</h3>
+                    <span><a href="/question">更多..</a></span>
+                </div>
+
+                <!-- 帖子 -->
+                <div class="tiezicontent">
+                    <% if(quesData.length){ %>
+                        <ul class="tiezilist">
+                            <% quesData.forEach(function(data){ %>
+                                <li>
+                                    <a href="/quesdetail?id=<%=data.id%>" class="zoo3-link" title="<%=data.title%>"><%=data.title%></a>
+                                </li>
+                            <% })%>
+                        </ul>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include footer.ejs %>
+</body>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/jquery.flexslider-min.js"></script>
+<script src="/javascripts/home.js"></script>
+</html>

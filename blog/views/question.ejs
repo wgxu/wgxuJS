@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/question.css">
+    <link rel="stylesheet" href="/stylesheets/tablequestion.css">
+    <title>前端博客</title>
+</head>
+<body>
+<div class="top">
+    <!-- logo -->
+    <div class="logo">前端开发博客</div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul class="firstlist">
+                <li class="firstlist-li">
+                    <a href="/" class="nav-name">首页 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/course" class="nav-name">教程 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/question" class="nav-name nav-name-selected">问问</a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/share" class="nav-name">分享</a>
+                </li>
+            </ul>
+        </div>
+        <% if(user.username){ %>
+            <div class="welcome">
+                <span id="userName"><a href="javascript:;" class="namelink"><%= user.name %></a></span>,欢迎您
+                <a href="/out" style="padding-left:10px;">退出</a>
+            </div>
+        <% } %>
+</div>
+
+<!-- 问题列表 -->
+<div class="webapp">
+    <!-- 提问 -->
+    <div class="tiwen">
+        <input type="button" value="提问" class="tiwen-input">
+    </div>
+
+    <!-- 问题列表 -->
+    <div class="question-tables">
+        <table class="tableDemo" cellspacing="0">
+            <tr>
+                <th class="tableDemo-th1">问题列表</th>
+                <th class="tableDemo-th2">作者</th>
+                <th class="tableDemo-th3">回复数</th>
+                <th class="tableDemo-th4">发表时间</th>
+            </tr>
+            
+
+            <%if(queData.length){ %>
+                <% queData.forEach(function(data){ %>
+                    <tr>
+                        <td  class="td1"><a href="/quesdetail?id=<%=data.id %>" title="<%= data.title%>"><%= data.title%></a></td>
+                        <td><%= data.author%></td>
+                        <td>23</td>
+                        <td><%= data.datetime%></td>
+                    </tr>
+                <%})%>
+            
+            <%}%>
+
+            
+        </table>
+    </div>
+</div>
+
+<% include footer.ejs %>
+</body>
+</html>

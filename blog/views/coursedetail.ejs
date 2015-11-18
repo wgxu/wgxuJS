@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/course-details.css">
+    <title>前端博客</title>
+</head>
+<body>
+<div class="top">
+    <!-- logo -->
+    <div class="logo">前端开发博客</div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul class="firstlist">
+                <li class="firstlist-li">
+                    <a href="/" class="nav-name">首页 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/course" class="nav-name">教程 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/question" class="nav-name">问问</a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/share" class="nav-name">分享</a>
+                </li>
+            </ul>
+        </div>
+        <% if(user.username){ %>
+            <div class="welcome">
+                <span id="userName"><a href="javascript:;" class="namelink"><%= user.name %></a></span>,欢迎您
+                <a href="/out" style="padding-left:10px;">退出</a>
+            </div>
+        <% } %>
+</div>
+
+<!-- 教程详情 -->
+<div class="webapp">
+    <div class="details-content">
+            <!-- 教程名字 -->
+            <div class="course-title">
+                <h4><%= courseData.title%></h4>
+                <!-- 文章信息 -->
+                <div class="actrclis-info">
+                    <span>作者 :</span>
+                    <span class="info-pos"><%= courseData.author%></span>
+                    <span>添加日期 :</span>
+                    <span class="info-pos"><%= courseData.datetime%></span>
+                    <span class="info-pos">评论(<span>xxx</span>)</span>
+                </div>
+            </div>
+
+            <!-- 文章内容 -->
+            <div class="article-content"><%= courseData.content%></div>
+    </div>
+
+    <!-- 用户评论 -->
+    <div class="user-discuss">
+        <div class="user-title">
+            <h3>会员评论</h3>
+            <a href="javascript:;">更多评论..</a>
+        </div>
+        <ul class="discusslist">
+            <li>
+                <div class="discuss-user">
+                    <span class="fabiao-user">xxx</span>发表于 :<span>2015-01-23</span>
+                </div>
+                <p class="discuss-text">这是一个比较厉害的热舞怒</p>
+            </li>
+
+            <li>
+                <div class="discuss-user">
+                    <span class="fabiao-user">xxx</span>发表于 :<span>2015-01-23</span>
+                </div>
+                <p class="discuss-text">这是一个比较厉害的热舞怒</p>
+            </li>
+
+            <li>
+                <div class="discuss-user">
+                    <span class="fabiao-user">xxx</span>发表于 :<span>2015-01-23</span>
+                </div>
+                <p class="discuss-text">这是一个比较厉害的热舞怒</p>
+            </li>
+        </ul>
+        
+        <!-- 用户评论区 -->
+        <div class="userpinlun">
+            <div class="editor-bor">
+                <script type="text/plain" id="myEditor" class="myEditor">
+                </script>
+            </div>
+            <!-- 发送按钮 -->
+            <div class="replysubmit">发送回复</div>
+        </div>
+    </div>
+</div>
+
+<% include footer.ejs %>
+</body>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/ueditor/ueditor.config.js"></script>
+<script src="/javascripts/ueditor/ueditor.all.min.js"></script>
+<script src="/javascripts/coursedetail.js"></script>
+</html>

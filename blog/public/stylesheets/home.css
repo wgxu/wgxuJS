@@ -1,0 +1,198 @@
+@charset("utf-8");
+/*blog提示数*/
+.blogtips{
+	width: 100%;
+	height: 20px;
+}
+.tip-img{
+	display: inline-block;
+	margin-top: 3px;
+	width: 17px;
+	height: 17px;
+	background:url("../images/indexsprites.png");
+	background-position: 0 0 ;
+}
+.zoo2,.zoo3{
+	overflow: hidden;
+	margin-top: 20px;
+	width: 100%;
+}
+/*==区域二，轮播和查询框==*/
+/*轮播*/
+.lunbo{
+	float: left;
+	margin-right: 20px;
+	width: 640px;
+	height: 300px;
+	/*background-color: pink;*/
+}
+/*搜索框和动态更新*/
+.search-update{
+	float: left;
+	width: 300px;
+}
+/*搜索框*/
+.web-search{
+	margin-bottom: 20px;
+	width: 300px;
+	height: 80px;
+	background-color: #F7F7F7;
+}
+.search-text{
+	padding:0 5px;
+	width: 198px;
+	height: 28px;
+	padding-top: 8px\9;
+	height: 20px\9;
+	outline: 0;	
+	border:0;
+}
+.web-search-left{
+	float: left;
+	margin:25px 0 25px 10px;
+	width: 208px;
+	height: 28px;
+	border:1px solid #2D58B9;
+}
+.web-search-right{
+	float: left;
+	margin:25px 10px 25px 0;
+	padding-top: 2px;
+	width:60px;
+	height: 28px;
+	color: #fff;
+	text-align: center;
+	background-color: #2D58B9;
+}
+/*动态更新*/
+.login{
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+	background-color: #F7F7F7;
+}
+.row{
+	margin: 20px 20px;
+	width: 260px;
+	height: 30px;
+}
+.row1{
+	margin-top: 30px;
+}
+.row span{
+	display: inline-block;
+	margin-right: 5px;
+	padding-top: 4px;
+	width: 50px;
+	height: 26px;
+}
+.row .input-info{
+	float: right;
+	margin-right: 20px;
+	padding: 0 5px;
+	padding-top: 8px\9;
+	width: 170px;
+	height: 28px;
+	height: 20px\9;
+	border:0;
+	outline: 0;
+	border:1px solid #2D58B9;
+	vertical-align: middle;
+}
+.row .login-but{
+	clear: both;
+	margin-left: 80px;
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	border:0;
+	outline: 0;
+	font-size: 14px;
+	cursor: pointer;
+	background-color: #2D58B9;
+}
+.row .register{
+	width: 80px;
+	height: 30px;
+	color: #fff;
+	border:0;
+	background-color: #F1F1F1;
+	outline: 0;
+	cursor: pointer;
+	color: #2D58B9;
+}
+/*==区域二，轮播和查询框==*/
+
+
+/*==区域三,内容展现==*/
+.tiezi,.jiaocheng{
+	float: left;
+	margin-right: 20px;
+	width: 304px;
+	height: 300px;
+	border:1px solid #F1F1F1;
+}
+/*帖子*/
+.title{
+	width: 304px;
+	height: 29px;
+	border-bottom: 1px solid #F1F1F1;
+	background-color: #F7F7F7;
+}
+.title  h3{
+	float: left;
+	padding-top: 4px;
+	padding-left: 10px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.title span{
+	float: right;
+	padding-top: 5px;
+	padding-right: 10px;
+	font-size: 13px;
+}
+.title span a{
+	color: #000;
+	text-decoration: none;
+}
+.title span a:hover{
+	text-decoration: underline;
+}
+.tiezicontent{
+	width: 304px;
+	height: 270px;
+}
+.tiezilist{
+	margin:10px;
+	width: 284px;
+	height: 250px;
+	list-style: none;
+}
+.tiezilist li{
+	height: 42px;
+	padding-left: 20px;
+	background: url("../images/home/icon3.gif") no-repeat left 5px;
+}
+/*链接*/
+.zoo3-link{
+	display: inline-block;
+	width: 250px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	text-decoration: none;
+	color: #0055AA;
+	font-size: 14px;	
+}
+.zoo3-link:hover{
+	color: #F0270A;
+	text-decoration: underline;
+}
+.questionlist{
+	float: left;
+	width: 304px;
+	height: 300px;
+	border:1px solid #F1F1F1;
+}
+/*==区域三,内容展现==*/

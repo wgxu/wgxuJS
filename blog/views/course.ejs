@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/common.css">
+    <link rel="stylesheet" href="/stylesheets/course.css">
+    <title>前端博客</title>
+</head>
+<body>
+<div class="top">
+    <!-- logo -->
+    <div class="logo">前端开发博客</div>
+        <!-- 导航 -->
+        <div class="nav">
+            <ul class="firstlist">
+                <li class="firstlist-li">
+                    <a href="/" class="nav-name">首页 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/course" class="nav-name nav-name-selected">教程 </a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/question" class="nav-name">问问</a>
+                </li>
+
+                <li class="firstlist-li">
+                    <a href="/share" class="nav-name">分享</a>
+                </li>
+            </ul>
+        </div>
+        <% if(user.username){ %>
+            <div class="welcome">
+                <span id="userName"><a href="javascript:;" class="namelink"><%= user.name %></a></span>,欢迎您
+                <a href="/out" style="padding-left:10px;">退出</a>
+            </div>
+        <% } %>
+</div>
+
+<!-- 教程下载 -->
+<div class="webapp">
+    <!-- 分类栏 -->
+    <div class="typelist">
+        <a href="javascript:;" class="typelist-seclected">全部</a>
+        <a href="javascript:;">js教程</a>
+        <a href="javascript:;" >css教程</a>
+        <a href="javascript:;" >html教程</a>
+    </div>
+
+
+    <!-- 内容栏 -->
+    <div id="tabs">
+        <!-- 全部教程 -->
+        <div class="course-content">
+            <% if(courseData.length){ %>
+                <% courseData.forEach(function(data){ %>
+                    <div class="content-list">
+                        <!-- 文章 -->
+                        <div class="article">
+                            <h4><a href="/coursedetail?id=<%=data.id%>" title="<%=data.title%>"><%=data.title%></a></h4>
+                            <p><%=data.content%></p>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
+
+        <!-- js教程 -->
+        <div class="course-content hide">
+            <% if(courseData.length){ %>
+                <% courseData.forEach(function(data){ %>
+                    <% if(data.type == "0"){ %>
+                        <div class="content-list">
+                            <!-- 文章 -->
+                            <div class="article">
+                                <h4><a href="/coursedetail?id=<%=data.id%>" title="<%=data.title%>"><%=data.title%></a></h4>
+                                <p><%=data.content%></p>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+
+        <!-- css教程 -->
+        <div class="course-content hide">
+            <% if(courseData.length){ %>
+                <% courseData.forEach(function(data){ %>
+                    <% if(data.type == "1"){ %>
+                        <div class="content-list">
+                            <!-- 文章 -->
+                            <div class="article">
+                                <h4><a href="/coursedetail?id=<%=data.id%>" title="<%=data.title%>"><%=data.title%></a></h4>
+                                <p><%=data.content%></p>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+        
+        <!-- html教程 -->
+        <div class="course-content hide">
+            <% if(courseData.length){ %>
+                <% courseData.forEach(function(data){ %>
+                    <% if(data.type == "2"){ %>
+                        <div class="content-list">
+                            <!-- 文章 -->
+                            <div class="article">
+                                <h4><a href="/coursedetail?id=<%=data.id%>" title="<%=data.title%>"><%=data.title%></a></h4>
+                                <p><%=data.content%></p>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }) %>
+            <% } %>
+        </div>
+    </div>
+</div>
+<% include footer.ejs %>
+</body>
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/course.js"></script>
+</html>
