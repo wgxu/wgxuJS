@@ -22,5 +22,21 @@ io.sockets.on('connection',function(socket){
          conns[i].emit("message",data);
        } 
     });
+
+    socket.on('disconnect',function(){
+        var index; //socket在列表索引
+        for(var i=0;i<conns.length;i++) {
+            if (conns[i] !== socket) {
+                var info;
+                conns[i].emit('news',{hello:socket + "离开聊天室"});
+            }else{
+                index = i;
+                console.log(socket + "离开聊天室");
+            };
+        }
+
+        //去除该socket
+        conns.splice(index,1);
+    });
 });
 
