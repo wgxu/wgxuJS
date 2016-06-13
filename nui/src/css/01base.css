@@ -1,0 +1,35 @@
+/**
+ * 重置浏览器以及设置公共样式
+ */
+@charset ('utf-8');
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address,em, img,small, strike, strong,
+dl, dt, dd, ol, ul, li, form{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+}ol, ul {list-style: none;}
+body {
+    font-size: 12px;
+    color: #000;
+}
+.SysClear {
+    zoom: 1;
+}
+.SysClear:after {
+    content: "\200B",
+    height:0;
+    clear: both;
+    display: block;
+}
+.SysTxtEll {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.SysHide {
+    display: none;
+}

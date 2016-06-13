@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/05HBTable.css">
+</head>
+<body>
+	<div class="SysTable">
+		<div class="SysTableController SysClear">		
+			<div class="SysTableControllerBtn SysFlR">展开筛选</div>
+			<div class="SysTableControllerList">
+				<a href="javascript:;" class="SysTableIcon SysTabelAdd">添加</a>
+				<a href="javascript:;" class="SysTableIcon SysTabelDel">删除</a>
+				<a href="javascript:;" class="SysTableIcon SysTabelOuter">导出</a>
+				<a href="javascript:;" class="SysTableIcon SysTabelPrint">打印</a>
+			</div>
+		</div>
+		<div class="SysTableSelect SysClear SysHide">
+			<div class="SysTableSelectLine">
+				<div class="SysTableSelName">时间</div>
+				<input type="text" name="" id="startDate" class="SysInputDate" placeholder="选择时间" onFocus="var endDate=$dp.$('endDate');WdatePicker({onpicked:function(){endDate.focus();},maxDate:'#F{$dp.$D(\'endDate\')}'})">
+				<span class="SysDateLine">一</span>
+				<input type="text" name="" id="endDate" class="SysInputDate" placeholder="选择时间" onFocus="WdatePicker({minDate:'#F{$dp.$D(\'startDate\')}'})">
+				<div class="SysTableSelName">地址</div>
+				<div class="SysPosA SysDivAddress"><input type="text" name="" id="" class="SysInputAddress" placeholder="输入地址"></div>				
+			</div>
+			<div class="SysTableSelectLine">
+				<div class="SysTableSelName">联系人</div>
+				<input type="text" name="" id="" class="SysInputMid" placeholder="输入联系人姓名">
+				<div class="SysTableSelName">电话</div>
+				<input type="text" name="" id="" class="SysInputMid" placeholder="输入电话">
+				<a href="javascript:;" class="SysFlR SysTableSelSea">搜索</a>	
+			</div>
+		</div>
+		<table class="SysTableContent">
+			<thead>
+				<th width="14">
+					<input type="checkbox" name="" id="SysCheckAll">
+				</th>
+				<th width="9.6%">序号</th>
+				<th width="33%">地址</th>
+				<th width="12.5%">联系人</th>
+				<th width="15%">电话</th>
+				<th>备注</th>
+				<th width="80">操作</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input type="checkbox" name="" id="">
+					</td>
+					<td>1</td>
+					<td>联系地址</td>
+					<td>张三</td>
+					<td>13888888888</td>
+					<td>无</td>
+					<td class="SysAController">
+						<a href="javascript:;" title="编辑">编辑</a>
+						<a href="javascript:;" title="删除">删除</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="" id="">
+					</td>
+					<td>2</td>
+					<td>联系地址</td>
+					<td>张三</td>
+					<td>13888888888</td>
+					<td>无</td>
+					<td class="SysAController">
+						<a href="javascript:;" title="编辑">编辑</a>
+						<a href="javascript:;" title="删除">删除</a>
+					</td>
+				</tr>			
+			</tbody>
+		</table>
+		<div class="SysPaging SysPagingDefault">
+			<span>首页</span>
+			<span class="SysPagingSong SysPagingPrev">&lt;&lt;</span>
+			<span class="SysCurrent">1</span>
+			<a href="">2</a>
+			<a href="">3</a>
+			<span class="SysPagingSong">…</span>
+			<a href="">22</a>
+			<a href="">23</a>
+			<a href="">24</a>
+			<a href="" class="SysPagingSong SysPagingNext">&gt;&gt;</a>
+			<a href="">尾页</a>
+		</div>
+	</div>
+	<script src="jquery.js"></script>
+	<script src="js/WdatePicker.js"></script>
+	<script type="text/javascript">
+		$(document).delegate('.SysInputDate', 'keydown', function(){
+			return false;
+		});
+		$(document).delegate('#SysCheckAll', 'click', function(){
+			$eles = $('tbody input:checkbox');
+			if($(this).prop('checked')){
+				$eles.prop('checked', true);
+			}else{
+				$eles.prop('checked', false);
+			}
+		});
+		$(document).delegate('tbody input:checkbox', 'click', function(){
+			var $checkAll = $('#SysCheckAll'),
+				$eles = $('tbody input:checkbox'),
+				len = $eles.length;
+			if($(this).prop('checked')){
+				for(var i=0,$ele;$ele=$eles.eq(i++);){
+					if(!$ele.prop('checked')){
+						break;
+					}
+					else if(i==len) $checkAll.prop('checked', true);
+				}
+			}else{
+				$checkAll.prop('checked', false);
+			}
+		});
+
+		$(document).delegate('.SysTableControllerBtn', 'click', function(){
+			var txt = '收起筛选';
+			if($(this).text().indexOf('收起')>-1) $(this).text('展开筛选');
+			else $(this).text(txt); 
+			$(this).toggleClass('SysOpen');
+			$('.SysTableSelect').toggleClass('SysHide');
+		});
+	</script>
+</body>
+</html>

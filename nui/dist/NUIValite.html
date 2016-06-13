@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>NUIValid校验Demo</title>
+    <link rel="stylesheet" type="text/css" href="./nui/plugins/valideForm/Validform.css">
+    <link rel="stylesheet" type="text/css" href="./nui/NUI.css"></head>
+
+<body>
+    <form class="NUIValidate" method="post" action="">
+        <input type="password" value="" name="name" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少6个字符,最多18个字符！" />
+        <input type="password" value="" name="name" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少6个字符,最多18个字符！" />
+        <select class="NUISelect" datatype="*" nullmsg="请输入性别">
+            <option value>请选择</option>
+            <option value=1>男</option>
+            <option value="2">女</option>
+        </select>
+        <input type="submit" value="提交"></form>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="./nui/plugins/valideForm/Validform_v5.3.2.js"></script>
+    <script type="text/javascript" src="./nui/NUI.js"></script>
+</body>
+</html>

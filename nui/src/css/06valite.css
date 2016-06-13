@@ -1,0 +1,38 @@
+.NUIValidCheckTip{margin-left:0;}
+.NUIValidInfo{
+    border:1px solid #ccc; 
+    padding:2px 20px 2px 5px; 
+    color:#666; 
+    position:absolute;
+    display:none;
+    line-height:20px;
+    z-index: 99999;
+    background-color:#fff;
+}
+.NUIValidDec {
+    bottom: 24px;
+    display: block;
+    height: 8px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    width: 17px;
+}
+.NUIValidDec s {
+    font-family: simsun;
+    font-size: 16px;
+    height: 19px;
+    left: 0;
+    line-height: 21px;
+    position: absolute;
+    text-decoration: none;
+    top: 0px;
+    width: 17px;
+}
+.NUIValidDec .dec2 {
+    color: #ccc;
+}
+.NUIValidDec .dec1 {
+    color: #fff;
+    top: -10px;
+}

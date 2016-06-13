@@ -1,0 +1,759 @@
+/**
+ * 重置浏览器以及设置公共样式
+ */
+@charset ('utf-8');
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, address,em, img,small, strike, strong,
+dl, dt, dd, ol, ul, li, form{
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        text-decoration: none;
+}ol, ul {list-style: none;}
+body {
+    font-size: 12px;
+    color: #000;
+}
+.SysClear {
+    zoom: 1;
+}
+.SysClear:after {
+    content: "\200B",
+    height:0;
+    clear: both;
+    display: block;
+}
+.SysTxtEll {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.SysHide {
+    display: none;
+}
+.NUISelectZoo {
+    float: left;
+}
+.NUISelect {
+    display: none;
+}
+.NUISelectName {
+    margin-top: 1px;
+    padding: 0 5px;
+    float: left;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+}
+.NUISelectCont {
+    position: relative;
+    height: 30px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+}
+.NUISelectVal {
+    position: absolute;
+    padding: 0 5px;
+    left: 0;
+    right: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.NUISelectIco {
+    position: relative;
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+.NUISelectIco i {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+}
+.NUISelectDown {
+     border-left: 6px solid transparent;
+     border-right: 6px solid transparent;
+     border-top: 6px solid #71c6fc;
+}
+.NUISelectUp {
+     border-left: 6px solid transparent;
+     border-right: 6px solid transparent;
+     border-bottom: 6px solid #71c6fc;
+}
+.NUISelectList {
+    position: absolute;
+    top: 31px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    z-index: 999;
+    background-color: #fff;
+    border-top: 1px solid #d2d2d2;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+
+.NUISelectList li {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid #d2d2d2;
+}
+.NUISelectList li:hover {
+    color: #71c6fc;
+}
+.NUISelectList li.active {
+    color: #71c6fc;
+}
+.NUITab {
+    zoom: 1;
+    border-bottom: 1px solid #71c6fc;
+}
+.NUITab:after{
+    content: "\200B";
+    height:0;
+    clear: both;
+    display: block;
+}
+.NUITab>li{
+    position: relative;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px 5px 0 0;
+}
+.NUITab>li.active {
+    background-color: #71c6fc;
+    color: #fff;
+}
+.NUITab>li>a {
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #71c6fc;
+}
+.NUITab>li.active>a{
+    color: #fff;
+}
+.NUITabCont div {
+    display: none;
+}
+@charset "utf-8";
+/*
+ * artDialog skin
+ * http://code.google.com/p/artdialog/
+ * (c) 2009-2011 TangBin, http://www.planeArt.cn
+ *
+ * This is licensed under the GNU LGPL, version 2.1 or later.
+ * For details, see: http://creativecommons.org/licenses/LGPL/2.1/
+ */
+ 
+/* common start */
+body { _margin:0; _height:100%; /*IE6 BUG*/ }
+.aui_outer { text-align:left; }
+table.aui_border, table.aui_dialog { border:0; margin:0; border-collapse:collapse; width:auto; }
+.aui_nw, .aui_n, .aui_ne, .aui_w, .aui_c, .aui_e, .aui_sw, .aui_s, .aui_se, .aui_header, .aui_tdIcon, .aui_main, .aui_footer { padding:0; }
+.aui_header, .aui_buttons button { font: 12px/1.11 'Microsoft Yahei', Tahoma, Arial, Helvetica, STHeiti; _font-family:Tahoma,Arial,Helvetica,STHeiti; -o-font-family: Tahoma, Arial; }
+.aui_title { overflow:hidden; text-overflow: ellipsis; }
+.aui_state_noTitle .aui_title { display:none; }
+.aui_close { display:block; position:absolute; text-decoration:none; outline:none; _cursor:pointer; }
+.aui_close:hover { text-decoration:none; }
+.aui_main { text-align:center; min-width:9em; min-width:0\9/*IE8 BUG*/; max-width:1000px;max-height:700px;display:block;}
+.aui_content { display:inline-block; *zoom:1; *display:inline; text-align:left; border:none 0; }
+.aui_content.aui_state_full { display:block; width:100%; margin:0; padding:0!important; height:100%; }
+.aui_loading { width:96px; height:32px; text-align:left; text-indent:-999em; overflow:hidden; background:url(icons/loading.gif) no-repeat center center; }
+.aui_icon { vertical-align: middle; }
+.aui_icon div { width:48px; height:48px; margin:10px 0 10px 10px; background-position: center center; background-repeat:no-repeat; }
+.aui_buttons { padding:8px; text-align:center; white-space:nowrap; }
+.aui_buttons button {margin:0 8px; cursor: pointer; display: inline-block; text-align: center; line-height: 35px;font-family: Tahoma, Arial/9!important; width:auto; overflow:visible; color: #333;border-radius: 5px; background:#e5e5e5; border:none;width:96px;color:#666;font-size:14px;
+height:35px;}
+.aui_buttons button::-moz-focus-inner{ border:0; padding:0; margin:0; }
+.aui_buttons button:focus { outline:none 0; }
+.aui_buttons button:hover { color:#000; border-color:#666; }
+.aui_buttons button:active {}
+.aui_buttons button[disabled] { cursor:default; color:#666; background:#DDD; border: solid 1px #999; filter:alpha(opacity=50); opacity:.5; box-shadow:none; }
+button.aui_state_highlight { color: #FFF; background: #71c6fc; }
+button.aui_state_highlight:hover { color:#FFF; }
+/* common end */
+
+.aui_inner { background:#FFF; box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);}
+.aui_outer, .aui_inner {}
+.aui_border { box-shadow: inset 0 0 1px rgba(255, 255, 255, .9); }
+.aui_nw, .aui_ne, .aui_sw, .aui_se { width:8px; height:8px; }
+.aui_nw, .aui_n, .aui_ne, .aui_w, .aui_e, .aui_sw, .aui_s, .aui_se { background:rgba(0, 0, 0, .4); background:#000\9!important; filter:alpha(opacity=40); }
+.aui_state_lock .aui_nw, .aui_state_lock .aui_n, .aui_state_lock .aui_ne, .aui_state_lock .aui_w, .aui_state_lock .aui_e, .aui_state_lock .aui_sw, .aui_state_lock .aui_s, .aui_state_lock .aui_se {/*  background:rgba(0, 0, 0, .5); background:#000\9!important; filter:alpha(opacity=50);  */}
+.aui_state_lock{
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.aui_state_focus .aui_dialog {/*  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);  */}
+.aui_state_focus .aui_outer { /* box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);  */}
+.aui_state_lock .aui_border {/*  box-shadow:0 3px 26px rgba(0, 0, 0, .9);  */}
+.aui_state_drag .aui_outer, .aui_outer:active { box-shadow:none; }
+.aui_titleBar { position:relative; height:100%; }
+.aui_title { height:28px; line-height:27px; padding:0 28px;text-align:center; font-weight:bold; color:#95a7ae; font-family: Tahoma, Arial/9!important; border-bottom:1px solid #d2d2d2; font-size:14px;}
+.aui_state_focus .aui_title { color:#666; }
+.aui_state_drag .aui_title { }
+.aui_state_drag .aui_titleBar { box-shadow:none; }
+.aui_close { padding:0; top:4px; right:4px; width:21px; height:21px; line-height:21px; font-size:20px; color:#68767b; text-align:center; font-family: Helvetica, STHeiti; _font-family: Tahoma, '\u9ed1\u4f53', 'Book Antiqua', Palatino; text-shadow:0 1px 0 rgba(255, 255, 255, .9); font-family:initial;}
+.aui_close:hover { background:#CCC; color:#FFF; }
+.aui_close:active { box-shadow: none; }
+.aui_content { color:#666; width:100%;height:100%;box-sizing:border-box;overflow-y:auto;}
+.aui_state_focus .aui_content { color:#000; }
+.aui_buttons { /* background-color:#F6F6F6; border-top:solid 1px #DADEE5;  */}
+.aui_state_noTitle .aui_nw, .aui_state_noTitle .aui_ne, .aui_state_noTitle .aui_sw, .aui_state_noTitle .aui_se { width:3px; height:3px; }
+.aui_state_noTitle .aui_inner { border:1px solid #666; background:#FFF; }
+.aui_state_noTitle .aui_outer { border:none 0; box-shadow:none; }
+.aui_state_noTitle .aui_nw, .aui_state_noTitle .aui_n, .aui_state_noTitle .aui_ne, .aui_state_noTitle .aui_w, .aui_state_noTitle .aui_e, .aui_state_noTitle .aui_sw, .aui_state_noTitle .aui_s, .aui_state_noTitle .aui_se { background:rgba(0, 0, 0, .05); background:#000\9!important; filter:alpha(opacity=5)!important; }
+.aui_state_noTitle .aui_titleBar { bottom:0; _bottom:0; _margin-top:0; }
+.aui_state_noTitle .aui_close { top:0; right:0; width:18px; height:18px; line-height:18px; text-align:center; text-indent:0; font-size:18px; text-decoration:none; color:#214FA3; background:none; filter:!important; }
+.aui_state_noTitle .aui_close:hover, .aui_state_noTitle .aui_close:active { text-decoration:none; color:#900; }
+.aui_state_noTitle .aui_dialog { box-shadow: none; }
+a{
+	text-decoration:none;
+}
+table{
+	border-collapse:collapse;
+}
+.SysTxtEll {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.SysHide{
+	display:none;
+}
+.SysFlR{
+	float:right;
+}
+.SysPosA{
+	position:absolute;
+}
+.SysClear:after{
+	clear:both;
+	display:block;
+	height:0;
+	font-size:0;
+	content:"";
+}
+/* table frame */
+.SysTable{
+	min-width:800px;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.SysTable .SysTableController{
+	margin-bottom:10px;
+}
+.SysTableController .SysTableControllerBtn{
+	cursor:pointer;
+	margin-left:25px;
+	padding:0 25px 0 5px;
+	position:relative;
+	height:30px;
+	border-radius:3px;
+	text-align:center;
+	color:#999;
+	font:14px/30px "microsoft yahei";
+	border:1px solid #D2D2D2;
+}
+.SysTableControllerList{
+	float:right;
+	line-height:32px;
+}
+.SysTableIcon{
+	display:inline-block;
+	position:relative;
+	padding-left:20px;
+	color:#999;
+	margin-right:15px;
+}
+.SysTableIcon:hover{
+	color:#71c6fc;
+}
+.SysTableIcon:before{
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-7px;
+	width:14px;
+	height:14px;
+	content:"";
+	background:url("../images/icon.png") no-repeat;
+}
+.SysTabelAdd:hover:before{
+	background-position:-14px 0;
+}
+.SysTabelDel:before{
+	background-position:0 -14px;
+}
+.SysTabelDel:hover:before{
+	background-position:-14px -14px;
+}
+.SysTabelOuter:before{
+	background-position:0 -28px;
+}
+.SysTabelOuter:hover:before{
+	background-position:-14px -28px;
+}
+.SysTabelPrint:before{
+	background-position:0 -42px;
+}
+.SysTabelPrint:hover:before{
+	background-position:-14px -42px;
+}
+.SysTableControllerBtn:before, .SysTableControllerBtn:after{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:5px;
+	top:50%;
+	border:7px solid transparent;
+}
+.SysTableControllerBtn:before{
+	border-top-color:#D2D2D2;
+	margin-top:-3px;
+}
+.SysTableControllerBtn:after{
+	border-top-color:#FFF;
+	margin-top:-5px;
+}
+.SysTableControllerBtn.SysOpen:before{
+	border-bottom-color:#D2D2D2;
+	border-top:none;
+	margin-top:-3px;
+}
+.SysTableControllerBtn.SysOpen:after{
+	border-top:none;
+	border-bottom-color:#FFF;
+	margin-top:-1px;
+}
+/* table select */
+.SysTableSelect{
+	border:1px solid #D2D2D2;
+	padding-bottom:20px;
+}
+.SysTableSelect .SysTableSelectLine{
+	margin-top:20px;
+	white-space:nowrap;
+	padding:0 20px;
+	height:32px;
+	line-height:32px;
+	position:relative;
+	font-family:"microsoft yahei";
+	z-index:1;
+}
+.SysTableSelectLine .SysTableSelName{
+	display:inline-block;
+	color:#999;
+	font-size:14px;
+	padding-right:2em;
+	margin-left:35px;
+}
+.SysTableSelectLine .SysTableSelName:first-child{
+	width:64px;
+	padding:0;
+	margin:0;
+}
+.SysInputDate, .SysInputAddress, .SysInputMid{
+	border:1px solid #d2d2d2;
+	padding:0 40px 0 12px;
+	box-sizing:border-box;
+	vertical-align:top;
+	border-radius:5px;
+	height:32px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	line-height:32px \9;
+}
+.SysInputDate{	
+	width:175px;
+	background:url("../images/date.png") no-repeat right center;
+}
+.SysInputAddress{
+	width:100%;
+}
+.SysInputMid{
+	width:248px;
+}
+.SysDateLine{
+	margin:0 5px;
+	font-size:12px;
+	display:inline-block;
+	color:#71c6fc;
+}
+.SysDivAddress{
+	top:0;
+	left:0;
+	width:100%;
+	padding:0 20px 0 560px;
+	box-sizing:border-box;
+	z-index:-1;
+	height:100%;
+}
+.SysTableSelSea{
+	border-radius:5px;
+	color:white;
+	height:32px;
+	background-color:#71c6fc;
+	padding:0 28px;
+	font:14px/32px "microsoft yahei";
+}
+/* table content */
+.NUITable{
+	width:100%;
+	margin-top:30px;
+	table-layout:fixed;
+}
+.NUITable th, .NUITable td{
+	padding:0 12px;
+}
+.NUITable th:first-child{
+	border-left:none;
+}
+.NUITable thead{
+	border:solid #71c6fc;
+	border-width:0 1px;
+}
+.NUITable th{
+	font:bold 16px/35px "microsoft yahei";
+	height:35px;
+	line-height:35px;
+	text-align:left;
+	color:#FFF;
+	border-left:1px solid #EEE;
+	background-color:#71c6fc;
+}
+.NUITable td{
+	height:38px;
+	color:#666;
+	border:1px solid #bababa;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font:14px/38px "microsoft yahei";
+}
+.NUITable tr:first-child td{
+	border-top:none;
+}
+.NUITable .SysAController a{
+	float:right;
+	color:#f8744c;
+}
+.NUITable .SysAController a:first-child{
+	color:#209eee;
+	float:left;
+}
+.NUITable input[type="checkbox"]{
+	width:14px;
+	height:14px;
+}
+/*
+	翻页 
+	SysPagingDefault 默认翻页样式
+*/
+.NUIPages{
+	margin-top:25px;
+	text-align:right;
+	height:26px;
+	color:#999;
+	font:12px/26px "microsoft yahei";
+}
+.NUIPages a {
+    text-decoration: none;
+    color: #999;
+}
+
+.NUIPages a, .NUIPages span {
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.NUIPages .next, .NUIPages .prev{
+	font-family:"宋体";
+}
+.NUIPages a.next, 
+.NUIPages a.prev {
+    color: #71c6fc;
+    font-weight: bold;
+}
+.NUIPages .current {
+    background: #71c6fc;
+    color: #fff;
+}
+
+.NUIPages .current.prev, .NUIPages .current.next{
+    color:#999;
+    border-color:#999;
+    background:#fff;
+}
+.NUIPages a {
+    text-decoration: none;
+    color: #999;
+}
+
+.NUIPages a, .NUIPages span {
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "宋体";
+}
+.NUIPages a.next, 
+.NUIPages a.prev {
+    color: #71c6fc;
+    font-weight: bold;
+}
+.NUIPages .current {
+    background: #71c6fc;
+    color: #fff;
+}
+
+.NUIPages .current.prev, .NUIPages .current.next{
+    color:#999;
+    border-color:#999;
+    background:#fff;
+    -webkit-border:1px solid red;
+}
+
+.NUIValidCheckTip{margin-left:0;}
+.NUIValidInfo{
+    border:1px solid #ccc; 
+    padding:2px 20px 2px 5px; 
+    color:#666; 
+    position:absolute;
+    display:none;
+    line-height:20px;
+    z-index: 99999;
+    background-color:#fff;
+}
+.NUIValidDec {
+    bottom: 24px;
+    display: block;
+    height: 8px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    width: 17px;
+}
+.NUIValidDec s {
+    font-family: simsun;
+    font-size: 16px;
+    height: 19px;
+    left: 0;
+    line-height: 21px;
+    position: absolute;
+    text-decoration: none;
+    top: 0px;
+    width: 17px;
+}
+.NUIValidDec .dec2 {
+    color: #ccc;
+}
+.NUIValidDec .dec1 {
+    color: #fff;
+    top: -10px;
+}
+.NUISearchInput {
+    padding: 0 25px 0 5px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    line-height: 30px;
+    background: url(./images/search-ico.png) no-repeat right;
+}
+.NUISearchtZoo {
+    position: relative;
+    float: left;
+    zoom: 1;
+}
+.NUISearchtZoo:after {
+    display: block;
+    height: 0;
+    content: '';
+    clear: both;
+    visibility: hidden;
+}
+.NUISearchList {
+    display: none;
+}
+.NUISearchList .NUISearchNoData {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e2e2e2;
+}
+.NUILinkage:after {
+    display: block;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.NUILinkage .NUISelectZoo {
+    margin-right: 10px;
+}
+button, input{
+	margin:0;
+	padding:0;
+	outline:none;
+}
+button{
+	border:none;
+	background:none;
+}
+.BtnNormal{
+	color:#666;
+	height:35px;
+	background:#e5e5e5;
+	padding:0 30px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	border-radius:5px;
+	cursor:pointer;
+}
+.BtnMin{
+	padding:0 15px;
+	font-size:12px;
+	height:25px;
+}
+.BtnNormal.BtnCancel:active, .BtnNormal.BtnCancel:hover{
+	color:#333;
+	background:#BBB;
+}
+.BtnNormal.BtnOk{
+	color:white;
+	background:#71c6fc;
+}
+.BtnNormal.BtnOk:active, .BtnNormal.BtnOk:hover{
+	background:#37acf7;
+}
+.BtnNormal.BtnDisabled{
+	opacity:.6;
+	cursor:not-allowed;
+}
+.SysSearchWrap{
+	display:inline-block;
+	position:relative;
+	height:32px;
+}
+.SysSearchWrap input{
+	height:30px;
+	line-height:30px;
+	border:1px solid #d2d2d2;
+	border-radius:3px;
+	vertical-align:top;
+	width:200px;
+	padding:0 40px 0 10px;
+	font-size:14px;
+	color:#333;
+}
+.SysSearchWrap input:focus{
+	border-color:#71c6fc;
+}
+.SysSearchWrap .SysSearchIcon{
+	position:absolute;
+	right:0;
+	top:0;
+	width:40px;
+	height:32px;
+	border:none;
+	cursor:pointer;
+	background:url("../images/search.png") no-repeat center;
+}
+.NUIInput {
+    padding: 0 5px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+}
+input:focus {
+    box-shadow:0 0 5px 2px rgba(0,175,253, .3);
+    border: 1px solid #71C6FC;
+}
+.NUIInputErr {
+    border: 1px solid #f00;
+}
+ul, li, ol{
+	margin:0;
+	padding:0;
+}
+.NUITree ul{
+	margin-left:25px;
+}
+.NUITree li{
+	padding-left:20px;
+}
+li{
+	list-style:none;
+
+}
+.NUITree li a{
+	display:block;
+	height:100%;
+	width:100%;
+}
+.NUITree li{
+	line-height:20px;
+}
+.NUITree li+ul, .NUITreeController li+ul{
+	display:none;
+}
+.NUITree .NUITreeOpen + ul, .NUITreeController .NUITreeOpen + ul{
+	display:block;
+}
+.NUITreeList{
+	position:relative;
+	cursor:pointer;
+}
+.NUITree .NUITreeList:before, .NUITree .NUITreeList:after{
+	position:absolute;
+	background:#CCC;
+	content:"";
+}
+.NUITree .NUITreeList:before{
+	width:12px;
+	height:2px;
+	left:0;
+	top:50%;
+	margin-top:-1px;
+}
+.NUITree .NUITreeList:after{
+	width:2px;
+	height:12px;
+	left:5px;
+	top:50%;
+	margin-top:-6px;
+}
+.NUITree .NUITreeOpen:after{
+	display:none;
+}

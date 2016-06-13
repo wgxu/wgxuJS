@@ -1,0 +1,31 @@
+.NUIPages a {
+    text-decoration: none;
+    color: #999;
+}
+
+.NUIPages a, .NUIPages span {
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "宋体";
+}
+.NUIPages a.next, 
+.NUIPages a.prev {
+    color: #71c6fc;
+    font-weight: bold;
+}
+.NUIPages .current {
+    background: #71c6fc;
+    color: #fff;
+}
+
+.NUIPages .current.prev, .NUIPages .current.next{
+    color:#999;
+    border-color:#999;
+    background:#fff;
+    -webkit-border:1px solid red;
+}

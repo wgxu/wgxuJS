@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" href="css/04HBdialog.css">
+</head>
+<body>
+<button id="btn1">确认提示框</button>
+<button id="btn2">确认提示框且有返回信息</button>
+<button id="btn3">iframe</button>
+<script src="jquery.js"></script>
+<script src="js/artDialog.js"></script>
+<script src="js/HBDialog.js"></script>
+<script>
+	$('#btn1').on('click', function(){
+		/*** 对话框 ***/
+		HB.HBArtTips({
+			id: 'btn1',
+			title: '消息',
+			content: '<div style="width:607px">我有节点且设置了宽度</div>',
+			okValue: '确定',
+			ok: function () {
+				//alert('你点击了确定');
+			},
+			cancelValue: '取消',
+			cancel: function () {
+				//alert('你点击了取消')
+			}
+		});
+	});
+
+	$('#btn2').on('click', function () {
+		HB.HBArtTips({
+			id: '#btn2',
+			title: '消息',
+			width: '50%',
+			height: '850px',
+			content: '<span>我设置了<em style="font-size:18px; color:red;">"容器宽度 50%, 高度 150px"</em></span><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>',
+			//okValue: '确定',
+			ok: function () {
+				$(this).remove();
+				/*** 确认框 ***/
+				HB.HBAtrSubmit({
+					title: '消息',
+					content: '<h1 style="width:250px">点击确认之后的文字</h1>',
+					ok: function(){
+
+					}
+				});
+			},
+			cancelValue: '取消',
+			cancel: function () {
+				//alert('你点击了取消')
+			}
+		});		
+	});
+
+	$('#btn3').on('click', function(){
+		HB.HBAtrIframe({
+			height: '900px',
+			content: '/artDialog/HBDialog-iframe.html'
+		});
+	});
+</script>
+</body>
+</html>

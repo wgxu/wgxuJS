@@ -1,0 +1,10 @@
+.NUILinkage:after {
+    display: block;
+    content: '';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.NUILinkage .NUISelectZoo {
+    margin-right: 10px;
+}

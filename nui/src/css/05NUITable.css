@@ -1,0 +1,287 @@
+a{
+	text-decoration:none;
+}
+table{
+	border-collapse:collapse;
+}
+.SysTxtEll {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.SysHide{
+	display:none;
+}
+.SysFlR{
+	float:right;
+}
+.SysPosA{
+	position:absolute;
+}
+.SysClear:after{
+	clear:both;
+	display:block;
+	height:0;
+	font-size:0;
+	content:"";
+}
+/* table frame */
+.SysTable{
+	min-width:800px;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.SysTable .SysTableController{
+	margin-bottom:10px;
+}
+.SysTableController .SysTableControllerBtn{
+	cursor:pointer;
+	margin-left:25px;
+	padding:0 25px 0 5px;
+	position:relative;
+	height:30px;
+	border-radius:3px;
+	text-align:center;
+	color:#999;
+	font:14px/30px "microsoft yahei";
+	border:1px solid #D2D2D2;
+}
+.SysTableControllerList{
+	float:right;
+	line-height:32px;
+}
+.SysTableIcon{
+	display:inline-block;
+	position:relative;
+	padding-left:20px;
+	color:#999;
+	margin-right:15px;
+}
+.SysTableIcon:hover{
+	color:#71c6fc;
+}
+.SysTableIcon:before{
+	position:absolute;
+	left:0;
+	top:50%;
+	margin-top:-7px;
+	width:14px;
+	height:14px;
+	content:"";
+	background:url("../images/icon.png") no-repeat;
+}
+.SysTabelAdd:hover:before{
+	background-position:-14px 0;
+}
+.SysTabelDel:before{
+	background-position:0 -14px;
+}
+.SysTabelDel:hover:before{
+	background-position:-14px -14px;
+}
+.SysTabelOuter:before{
+	background-position:0 -28px;
+}
+.SysTabelOuter:hover:before{
+	background-position:-14px -28px;
+}
+.SysTabelPrint:before{
+	background-position:0 -42px;
+}
+.SysTabelPrint:hover:before{
+	background-position:-14px -42px;
+}
+.SysTableControllerBtn:before, .SysTableControllerBtn:after{
+	width:0;
+	height:0;
+	content:"";
+	position:absolute;
+	right:5px;
+	top:50%;
+	border:7px solid transparent;
+}
+.SysTableControllerBtn:before{
+	border-top-color:#D2D2D2;
+	margin-top:-3px;
+}
+.SysTableControllerBtn:after{
+	border-top-color:#FFF;
+	margin-top:-5px;
+}
+.SysTableControllerBtn.SysOpen:before{
+	border-bottom-color:#D2D2D2;
+	border-top:none;
+	margin-top:-3px;
+}
+.SysTableControllerBtn.SysOpen:after{
+	border-top:none;
+	border-bottom-color:#FFF;
+	margin-top:-1px;
+}
+/* table select */
+.SysTableSelect{
+	border:1px solid #D2D2D2;
+	padding-bottom:20px;
+}
+.SysTableSelect .SysTableSelectLine{
+	margin-top:20px;
+	white-space:nowrap;
+	padding:0 20px;
+	height:32px;
+	line-height:32px;
+	position:relative;
+	font-family:"microsoft yahei";
+	z-index:1;
+}
+.SysTableSelectLine .SysTableSelName{
+	display:inline-block;
+	color:#999;
+	font-size:14px;
+	padding-right:2em;
+	margin-left:35px;
+}
+.SysTableSelectLine .SysTableSelName:first-child{
+	width:64px;
+	padding:0;
+	margin:0;
+}
+.SysInputDate, .SysInputAddress, .SysInputMid{
+	border:1px solid #d2d2d2;
+	padding:0 40px 0 12px;
+	box-sizing:border-box;
+	vertical-align:top;
+	border-radius:5px;
+	height:32px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	line-height:32px \9;
+}
+.SysInputDate{	
+	width:175px;
+	background:url("../images/date.png") no-repeat right center;
+}
+.SysInputAddress{
+	width:100%;
+}
+.SysInputMid{
+	width:248px;
+}
+.SysDateLine{
+	margin:0 5px;
+	font-size:12px;
+	display:inline-block;
+	color:#71c6fc;
+}
+.SysDivAddress{
+	top:0;
+	left:0;
+	width:100%;
+	padding:0 20px 0 560px;
+	box-sizing:border-box;
+	z-index:-1;
+	height:100%;
+}
+.SysTableSelSea{
+	border-radius:5px;
+	color:white;
+	height:32px;
+	background-color:#71c6fc;
+	padding:0 28px;
+	font:14px/32px "microsoft yahei";
+}
+/* table content */
+.NUITable{
+	width:100%;
+	margin-top:30px;
+	table-layout:fixed;
+}
+.NUITable th, .NUITable td{
+	padding:0 12px;
+}
+.NUITable th:first-child{
+	border-left:none;
+}
+.NUITable thead{
+	border:solid #71c6fc;
+	border-width:0 1px;
+}
+.NUITable th{
+	font:bold 16px/35px "microsoft yahei";
+	height:35px;
+	line-height:35px;
+	text-align:left;
+	color:#FFF;
+	border-left:1px solid #EEE;
+	background-color:#71c6fc;
+}
+.NUITable td{
+	height:38px;
+	color:#666;
+	border:1px solid #bababa;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font:14px/38px "microsoft yahei";
+}
+.NUITable tr:first-child td{
+	border-top:none;
+}
+.NUITable .SysAController a{
+	float:right;
+	color:#f8744c;
+}
+.NUITable .SysAController a:first-child{
+	color:#209eee;
+	float:left;
+}
+.NUITable input[type="checkbox"]{
+	width:14px;
+	height:14px;
+}
+/*
+	翻页 
+	SysPagingDefault 默认翻页样式
+*/
+.NUIPages{
+	margin-top:25px;
+	text-align:right;
+	height:26px;
+	color:#999;
+	font:12px/26px "microsoft yahei";
+}
+.NUIPages a {
+    text-decoration: none;
+    color: #999;
+}
+
+.NUIPages a, .NUIPages span {
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.NUIPages .next, .NUIPages .prev{
+	font-family:"宋体";
+}
+.NUIPages a.next, 
+.NUIPages a.prev {
+    color: #71c6fc;
+    font-weight: bold;
+}
+.NUIPages .current {
+    background: #71c6fc;
+    color: #fff;
+}
+
+.NUIPages .current.prev, .NUIPages .current.next{
+    color:#999;
+    border-color:#999;
+    background:#fff;
+}

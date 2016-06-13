@@ -1,0 +1,15 @@
+.NUIInput {
+    padding: 0 5px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+}
+input:focus {
+    box-shadow:0 0 5px 2px rgba(0,175,253, .3);
+    border: 1px solid #71C6FC;
+}
+.NUIInputErr {
+    border: 1px solid #f00;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUIPages Demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/NUI.css">
+</head>
+<body>
+    <div class="NUIPages" data-url="./data/Linkage.json" data-total="123" data-options="{success:test,error:error}"></div>
+</body>
+<script src="jquery.js"></script>
+<script src="js/NUI.js"></script>
+<script type="text/javascript">
+ var $ele = $('.NUIPages');
+    function test(data,pageIndex){
+        if(pageIndex != 1) {
+            debugger;
+            NUI.NUIPages($ele,40,{success:test,current_page:2},'123');
+        }
+        console.log(pageIndex);
+    }
+    function error(e){
+        if(pageIndex != 1) {
+            NUI.NUIPages($ele,40,{success:test},'123');
+        }s
+        console.log(e);
+    }
+   
+</script>
+</html>

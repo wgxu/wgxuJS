@@ -1,0 +1,82 @@
+.NUISelectZoo {
+    float: left;
+}
+.NUISelect {
+    display: none;
+}
+.NUISelectName {
+    margin-top: 1px;
+    padding: 0 5px;
+    float: left;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+}
+.NUISelectCont {
+    position: relative;
+    height: 30px;
+    border: 1px solid #d2d2d2;
+    border-radius: 5px;
+}
+.NUISelectVal {
+    position: absolute;
+    padding: 0 5px;
+    left: 0;
+    right: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.NUISelectIco {
+    position: relative;
+    display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+}
+.NUISelectIco i {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+}
+.NUISelectDown {
+     border-left: 6px solid transparent;
+     border-right: 6px solid transparent;
+     border-top: 6px solid #71c6fc;
+}
+.NUISelectUp {
+     border-left: 6px solid transparent;
+     border-right: 6px solid transparent;
+     border-bottom: 6px solid #71c6fc;
+}
+.NUISelectList {
+    position: absolute;
+    top: 31px;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    z-index: 999;
+    background-color: #fff;
+    border-top: 1px solid #d2d2d2;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+
+.NUISelectList li {
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    border-bottom: 1px solid #d2d2d2;
+}
+.NUISelectList li:hover {
+    color: #71c6fc;
+}
+.NUISelectList li.active {
+    color: #71c6fc;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<link rel="stylesheet" href="css/NUI.min.css">
+</head>
+<body>
+<button class="BtnNormal BtnOk" id="btn1">提示框</button>
+<br />
+<br />
+<button class="BtnNormal BtnOk" id="btn4">确认框</button>
+<br />
+<br />
+<button class="BtnNormal BtnCancel" id="btn2">提示确认框</button>
+<br />
+<br />
+<button class="BtnNormal" id="btn3">iframe</button>
+<script src="jquery.js"></script>
+<script src="js/NUI.js"></script>
+<script src="plugins/dialog/dialog.js"></script>
+<script>
+	$('#btn1').on('click', function(){
+		/*** 对话框 ***/
+		NUI.NUIArtTips({
+			title: '消息',
+			content: '<div style="width:607px">我有节点且设置了宽度</div>',
+			okValue: '确定',
+			ok: function () {
+				//alert('你点击了确定');
+			},
+			cancelValue: '取消',
+			cancel: function () {
+				//alert('你点击了取消')
+			}
+		});
+	});
+
+	$('#btn2').on('click', function () {
+		NUI.NUIArtTips({
+			title: '消息',
+			width: '50%',
+			height: '450px',
+			content: '<span>我设置了<em style="font-size:18px; color:red;">"容器宽度 50%, 高度 150px"</em></span><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p><p>1</p>',
+			//okValue: '确定',
+			ok: function () {
+				$(this).remove();
+				/*** 确认框 ***/
+				NUI.NUIAtrSubmit({
+					title: '消息',
+					content: '<h1 style="width:250px">点击确认之后的文字</h1>',
+					ok: function(){
+
+					}
+				});
+			},
+			cancelValue: '取消',
+			cancel: function () {
+				//alert('你点击了取消')
+			}
+		});		
+	});
+
+	$('#btn4').on('click', function(){
+		NUI.NUIAtrSubmit({
+			width: '50%',
+			height: '50%',
+			title: '确认',
+			content: '<h1 style="width:250px">我是百分比宽度的确认框</h1>',
+			ok: function(){
+
+			}
+		});
+	});
+
+	$('#btn3').on('click', function(){
+		NUI.NUIAtrIframe({
+			height: '900px',
+			content: '/artDialog/HBDialog-iframe.html'
+		});
+	});
+</script>
+</body>
+</html>

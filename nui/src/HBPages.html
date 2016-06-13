@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUIPages Demo</title>
+    <link rel="stylesheet" type="text/css" href="./css/01base.css">
+    <link rel="stylesheet" type="text/css" href="./css/06NUIPages.css">
+</head>
+<body>
+    <div class="NUIPages" data-url="123" data-options="{sucess:test,error:error}"></div>
+</body>
+<script src="jquery.js"></script>
+<script src="js/01core.js"></script>
+<script src="js/06NUIPages.js"></script>
+<script src="js/09scan.js"></script>
+<script type="text/javascript">
+    function test(id){
+        console.log(id);
+    }
+    function error(e){
+        console.log(e);
+    }
+</script>
+</html>

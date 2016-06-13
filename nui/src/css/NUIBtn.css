@@ -1,0 +1,68 @@
+button, input{
+	margin:0;
+	padding:0;
+	outline:none;
+}
+button{
+	border:none;
+	background:none;
+}
+.BtnNormal{
+	color:#666;
+	height:35px;
+	background:#e5e5e5;
+	padding:0 30px;
+	font-size:14px;
+	font-family:"microsoft yahei";
+	border-radius:5px;
+	cursor:pointer;
+}
+.BtnMin{
+	padding:0 15px;
+	font-size:12px;
+	height:25px;
+}
+.BtnNormal.BtnCancel:active, .BtnNormal.BtnCancel:hover{
+	color:#333;
+	background:#BBB;
+}
+.BtnNormal.BtnOk{
+	color:white;
+	background:#71c6fc;
+}
+.BtnNormal.BtnOk:active, .BtnNormal.BtnOk:hover{
+	background:#37acf7;
+}
+.BtnNormal.BtnDisabled{
+	opacity:.6;
+	cursor:not-allowed;
+}
+.SysSearchWrap{
+	display:inline-block;
+	position:relative;
+	height:32px;
+}
+.SysSearchWrap input{
+	height:30px;
+	line-height:30px;
+	border:1px solid #d2d2d2;
+	border-radius:3px;
+	vertical-align:top;
+	width:200px;
+	padding:0 40px 0 10px;
+	font-size:14px;
+	color:#333;
+}
+.SysSearchWrap input:focus{
+	border-color:#71c6fc;
+}
+.SysSearchWrap .SysSearchIcon{
+	position:absolute;
+	right:0;
+	top:0;
+	width:40px;
+	height:32px;
+	border:none;
+	cursor:pointer;
+	background:url("../images/search.png") no-repeat center;
+}

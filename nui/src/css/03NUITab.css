@@ -1,0 +1,33 @@
+.NUITab {
+    zoom: 1;
+    border-bottom: 1px solid #71c6fc;
+}
+.NUITab:after{
+    content: "\200B";
+    height:0;
+    clear: both;
+    display: block;
+}
+.NUITab>li{
+    position: relative;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px 5px 0 0;
+}
+.NUITab>li.active {
+    background-color: #71c6fc;
+    color: #fff;
+}
+.NUITab>li>a {
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 16px;
+    color: #71c6fc;
+}
+.NUITab>li.active>a{
+    color: #fff;
+}
+.NUITabCont div {
+    display: none;
+}

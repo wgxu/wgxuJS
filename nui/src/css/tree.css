@@ -1,0 +1,54 @@
+ul, li, ol{
+	margin:0;
+	padding:0;
+}
+.NUITree ul{
+	margin-left:25px;
+}
+.NUITree li{
+	padding-left:20px;
+}
+li{
+	list-style:none;
+
+}
+.NUITree li a{
+	display:block;
+	height:100%;
+	width:100%;
+}
+.NUITree li{
+	line-height:20px;
+}
+.NUITree li+ul, .NUITreeController li+ul{
+	display:none;
+}
+.NUITree .NUITreeOpen + ul, .NUITreeController .NUITreeOpen + ul{
+	display:block;
+}
+.NUITreeList{
+	position:relative;
+	cursor:pointer;
+}
+.NUITree .NUITreeList:before, .NUITree .NUITreeList:after{
+	position:absolute;
+	background:#CCC;
+	content:"";
+}
+.NUITree .NUITreeList:before{
+	width:12px;
+	height:2px;
+	left:0;
+	top:50%;
+	margin-top:-1px;
+}
+.NUITree .NUITreeList:after{
+	width:2px;
+	height:12px;
+	left:5px;
+	top:50%;
+	margin-top:-6px;
+}
+.NUITree .NUITreeOpen:after{
+	display:none;
+}
