@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUISelect插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;">示例:</span>
+                <select id="select" name="citylist"  class="pos NUISelect" data-options="{width:200}">
+                    <option value="">请选择</option>
+                    <option value="Test21">安徽省</option>
+                    <option value="Test15">江苏省</option>
+                    <option value="Test41">浙江省</option>
+                    <option value="Test31">福建省</option>
+                    <option value="Test51">广东省</option>
+                    <option value="Test31">福建省</option>
+                    <option value="Test51">黑龙江省</option>
+                </select>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre">
+                    &lt;select id="select" name="citylist"  class="pos NUISelect" data-options="{width:200}"&gt;
+                        &lt;option value=""&gt;请选择&lt;/option&gt;
+                        &lt;option value="Test21"&gt;安徽省&lt;/option&gt;
+                        &lt;option value="Test15"&gt;江苏省&lt;/option&gt;
+                        &lt;option value="Test41"&gt;浙江省&lt;/option&gt;
+                        &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                        &lt;option value="Test51"&gt;广东省&lt;/option&gt;
+                        &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                        &lt;option value="Test51"&gt;黑龙江省&lt;/option&gt;
+                    &lt;/select&gt;
+                </pre>
+            </div>
+        </div>
+        <h3 class="btn-api">NUITab API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="40">参数</th>
+                    <th width="45%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUISelect</td>
+                    <td>-</td>
+                    <td>申明NUISelect类就可以使用框架提供的组件</td>
+                </tr>
+                <tr>
+                    <td>data-options</td>
+                    <td style="text-align: left;">
+                        <p>1、width(组件宽度)</p>
+                        <p>2、valueColor(字体颜色，默认黑色)</p> 
+                        <p>3、beforeSelect函数，选中前函数</p>  
+                        <p>4、onSelect函数，选中时的函数 </p>
+                        <p>5、afterSelect选中后的函数</p>
+                    </td>
+                    <td style="text-align: left;">组件对外提供的接口：
+                        <p>1、width(组件宽度)</p> 
+                        <p>2、valueColor(字体颜色，默认黑色)</p> 
+                        <p>3、beforeSelect函数，选中前触发的函数</p> 
+                        <p>4、onSelect函数，选中时触发的函数</p>
+                        <p>5、afterSelect选中后触发的函数</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="inp-desc btn-desc">
+            备注：1、<span style="color: red;">该插件会自动把原生的select组件替换成新的UI组件，在新的UI组件上操作会同步到原生select上，所以后台获取值的时候，可以直接获取原生的值。如$(selectName).val();</span>,所以后台人员可以直接操作原生的select。
+            <br />
+            2、可以直接使用class来控制原生的select布局，这个布局会同步到UI框架中。
+        </p>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="en"&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;title&gt;NUI API&lt;/title&gt;
+                    &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                    &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                    &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div class="wrapper layout"&gt;
+                        &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                        &lt;h3 class="inp-title"&gt;NUISelect插件&lt;/h3&gt;
+                        &lt;div class="inp-demo clearfix"&gt;
+                            &lt;div class="sel-eg clearfix"&gt;
+                                &lt;span style="float: left;"&gt;示例:&lt;/span&gt;
+                                &lt;select id="select" name="citylist"  class="pos NUISelect" data-options="{width:200}"&gt;
+                                    &lt;option value=""&gt;请选择&lt;/option&gt;
+                                    &lt;option value="Test21"&gt;安徽省&lt;/option&gt;
+                                    &lt;option value="Test15"&gt;江苏省&lt;/option&gt;
+                                    &lt;option value="Test41"&gt;浙江省&lt;/option&gt;
+                                    &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                                    &lt;option value="Test51"&gt;广东省&lt;/option&gt;
+                                    &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                                    &lt;option value="Test51"&gt;黑龙江省&lt;/option&gt;
+                                &lt;/select&gt;
+                            &lt;/div&gt;
+                            &lt;div class="sel-pre"&gt;
+                                &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                &lt;pre class="btn-pre"&gt;
+                                    &lt;select id="select" name="citylist"  class="pos NUISelect" data-options="{width:200}"&gt;
+                                    &lt;option value=""&gt;请选择&lt;/option&gt;
+                                    &lt;option value="Test21"&gt;安徽省&lt;/option&gt;
+                                    &lt;option value="Test15"&gt;江苏省&lt;/option&gt;
+                                    &lt;option value="Test41"&gt;浙江省&lt;/option&gt;
+                                    &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                                    &lt;option value="Test51"&gt;广东省&lt;/option&gt;
+                                    &lt;option value="Test31"&gt;福建省&lt;/option&gt;
+                                    &lt;option value="Test51"&gt;黑龙江省&lt;/option&gt;
+                                &lt;/select&gt;
+                                &lt;/pre&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;h3 class="btn-api"&gt;NUITab API列表&lt;/h3&gt;
+                        &lt;table class="btn-table"&gt;
+                            &lt;thead&gt;
+                                &lt;tr&gt;
+                                    &lt;th width="15%"&gt;属性&lt;/th&gt;
+                                    &lt;th width="20"&gt;参数&lt;/th&gt;
+                                    &lt;th width="65%"&gt;说明&lt;/th&gt;
+                                &lt;/tr&gt;
+                            &lt;/thead&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;NUISelect&lt;/td&gt;
+                                    &lt;td&gt;-&lt;/td&gt;
+                                    &lt;td&gt;申明NUISelect类就可以使用框架提供的组件&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;data-options&lt;/td&gt;
+                                    &lt;td&gt;1、width(组件宽度) 2、valueColor(字体颜色，默认黑色) 3、beforeSelect函数，选中前函数 4、onSelect函数，选中时的函数 5、afterSelect选中后的函数&lt;/td&gt;
+                                    &lt;td&gt;组件对外提供的接口：1、width(组件宽度) 2、valueColor(字体颜色，默认黑色) 3、beforeSelect函数，选中前触发的函数 4、onSelect函数，选中时触发的函数 5、afterSelect选中后触发的函数&lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+
+                        &lt;p class="inp-desc btn-desc"&gt;
+                            备注：1、&lt;span style="color: red;"&gt;该插件会自动把原生的select组件替换成新的UI组件，在新的UI组件上操作会同步到原生select上，所以后台获取值的时候，可以直接获取原生的值。如$(selectName).val();&lt;/span&gt;,所以后台人员可以直接操作原生的select。
+                            &lt;br /&gt;
+                            2、可以直接使用class来控制原生的select布局，这个布局会同步到UI框架中。
+                        &lt;/p&gt;
+                        &lt;div class="htmlcode"&gt;
+                            &lt;h4 class="htmlcode-title"&gt;
+                                源码
+                                &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                            &lt;/h4&gt;
+                            &lt;div class="htmlcode-content"&gt;
+                                &lt;pre style="background-color: #fff"&gt;
+                                &lt;/pre&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/body&gt;
+                    &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                    &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

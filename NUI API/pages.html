@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUIPages插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;line-height: 30px;">示例:</span>
+                 <div class="NUIPages" data-url="./data/Linkage.json" data-total="123" data-options="{success:test,page_size:20,pageSizeField:'pageSize',pageIndexField:'pageIndex',error:test2}" style="text-align: center;"></div>
+                 <script type="text/javascript">
+                    function test(data,pageIndex){
+                        alert(pageIndex);
+                    }
+                    function test2(e){
+                        alert(e);
+                    }
+                </script>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                    &lt;div class="NUIPages" data-url="./data/Linkage.json" data-total="123" data-options="{success:test,page_size:20,pageSizeField:'pageSize',pageIndexField:'pageIndex',error:test2}" style="text-align: center;"&gt;&lt;/div&gt;
+                    &lt;script type="text/javascript"&gt;
+                        function test(data,pageIndex){
+                            alert(pageIndex);
+                        }
+                        function test2(e){
+                            alert(e);
+                        }
+                    &lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="searchINput-desc">
+            <span class="btn-codetext">说明：</span>
+            <p>分页插件采用ajax的交互方式，通过绑定申明的方式把count以及url和请求成功后的success函数绑定到dom中，这样方便后台人员直接绑定，而不关注具体的实现逻辑。<span style="color: red;">ajax请求分页数据的时候，在数据根层级有total这个字段返回当前数据的总条数。如：{data:[...],total: "123"}。</span></p>
+        </div>
+        <h3 class="btn-api">NUIPages API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="55">参数</th>
+                    <th width="30%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUIPages</td>
+                    <td>-</td>
+                    <td>申明该class表明仅使用框架分页的插件</td>
+                </tr>
+                <tr>
+                    <td>data-url</td>
+                    <td style="text-align: left;">是一个字符串,这个url即及请求后台分页数据的接口</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                 <tr>
+                    <td>data-total</td>
+                    <td style="text-align: left;">是一个数字字符串，是当前分页数据的总条数</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>data-options</td>
+                    <td style="text-align: left;">
+                        <p>1、page_size(每页多少条,默认每页10条）</p>
+                        <p>2、num_display(翻个个数的设置，默认是10个）</p>
+                        <p>3、pageSizeField(设置传到后台的参数域值，表示每页多少条数据，默认值pageSize)</p>
+                        <p>4、pageIndexField(设置传到后台的参数域值，表示当前是第几页，默认值pageIndex)</p>
+                        <p>5、success函数，即发送ajax请求后，成功时调用的函数。有两个参数，第一个是请求数据data，另一个数据是当前页面pageIndex</p>
+                        <p>6、error函数，即发送ajax请求后，失败时调用的函数，只有一个参数，即e，错误对象</p>
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="inp-desc btn-desc">
+            备注： 该插件会每次根据回归的total数据，重新刷新这个分页。所以<span style="color: red;">需要返回的数据中，在根级目录必要要有total字段，否则插件渲染会失败。</span>
+        </p>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff;color: #000;">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUIPages插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;示例:&lt;/span&gt;
+                                     &lt;div class="NUIPages" data-url="./data/Linkage.json" data-total="123" data-options="{success:test,page_size:20,pageSizeField:'pageSize',pageIndexField:'pageIndex',error:test2}" style="text-align: center;"&gt;&lt;/div&gt;
+                                     &lt;script type="text/javascript"&gt;
+                                        function test(data,pageIndex){
+                                            alert(pageIndex);
+                                        }
+                                        function test2(e){
+                                            alert(e);
+                                        }
+                                    &lt;/script&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                        &lt;div class="NUIPages" data-url="./data/Linkage.json" data-total="123" data-options="{success:test,page_size:20,pageSizeField:'pageSize',pageIndexField:'pageIndex',error:test2}" style="text-align: center;"&gt;&lt;/div&gt;
+                                        &lt;script type="text/javascript"&gt;
+                                            function test(data,pageIndex){
+                                                alert(pageIndex);
+                                            }
+                                            function test2(e){
+                                                alert(e);
+                                            }
+                                        &lt;/script&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="searchINput-desc"&gt;
+                                &lt;span class="btn-codetext"&gt;说明：&lt;/span&gt;
+                                &lt;p&gt;分页插件采用ajax的交互方式，通过绑定申明的方式把count以及url和请求成功后的success函数绑定到dom中，这样方便后台人员直接绑定，而不关注具体的实现逻辑。&lt;span style="color: red;"&gt;ajax请求分页数据的时候，在数据根层级有total这个字段返回当前数据的总条数。如：{data:[...],total: "123"}。&lt;/span&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="btn-api"&gt;NUIPages API列表&lt;/h3&gt;
+                            &lt;table class="btn-table"&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th width="15%"&gt;属性&lt;/th&gt;
+                                        &lt;th width="55"&gt;参数&lt;/th&gt;
+                                        &lt;th width="30%"&gt;说明&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUIPages&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明该class表明仅使用框架分页的插件&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-url&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个字符串,这个url即及请求后台分页数据的接口&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                     &lt;tr&gt;
+                                        &lt;td&gt;data-total&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个数字字符串，是当前分页数据的总条数&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-options&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;
+                                            &lt;p&gt;1、page_size(每页多少条,默认每页10条）&lt;/p&gt;
+                                            &lt;p&gt;2、num_display(翻个个数的设置，默认是10个）&lt;/p&gt;
+                                            &lt;p&gt;3、pageSizeField(设置传到后台的参数域值，表示每页多少条数据，默认值pageSize)&lt;/p&gt;
+                                            &lt;p&gt;4、pageIndexField(设置传到后台的参数域值，表示当前是第几页，默认值pageIndex)&lt;/p&gt;
+                                            &lt;p&gt;5、success函数，即发送ajax请求后，成功时调用的函数。有两个参数，第一个是请求数据data，另一个数据是当前页面pageIndex&lt;/p&gt;
+                                            &lt;p&gt;6、error函数，即发送ajax请求后，失败时调用的函数，只有一个参数，即e，错误对象&lt;/p&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+
+                            &lt;p class="inp-desc btn-desc"&gt;
+                                备注： 该插件会每次根据回归的total数据，重新刷新这个分页。所以&lt;span style="color: red;"&gt;需要返回的数据中，在根级目录必要要有total字段，否则插件渲染会失败。&lt;/span&gt;
+                            &lt;/p&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff;color: #000;"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.js"></script>
+    <script src="js/common.js"></script>
+</html>

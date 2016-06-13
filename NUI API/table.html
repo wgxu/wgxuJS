@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUITable</h3>
+        <div class="inp-demo clearfix">
+            <div class="inp-ep">
+                <span>e.g: 无请求数据表格</span>
+                <table class="NUITable">
+					<thead>
+						<tr>
+							<th width="14"><input type="checkbox" name="checkView" class="SysCheckAll"></th>
+							<th width="9.6%">序号</th>
+							<th width="33%" data-filed="address">地址</th>
+							<th width="12.5%" data-filed="name">联系人</th>
+							<th width="15%" data-filed="phone">电话</th>
+							<th data-filed="notes">备注</th>
+							<th width="80" data-format="test1">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" name="checkView"></td>
+							<td>1</td>
+							<td>蜀山区</td>
+							<td>张三</td>
+							<td>13888888881</td>
+							<td>无</td>
+							<td>213</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="checkView"></td>
+							<td>2</td>
+							<td>蜀山区</td>
+							<td>张三</td>
+							<td>13888888881</td>
+							<td>无</td>
+							<td>213</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+            <div class="inp-code" style="margin-top:30px;">
+                <span>代码：</span>
+                <pre class="inp-pre" style="display:block;">
+                	&lt;table class="NUITable"&gt;
+						&lt;thead&gt;
+							&lt;tr&gt;
+								&lt;th width="14"&gt;&lt;input type="checkbox" name="checkView" class="SysCheckAll"&gt;&lt;/th&gt;
+								&lt;th width="9.6%"&gt;序号&lt;/th&gt;
+								&lt;th width="33%" data-filed="address"&gt;地址&lt;/th&gt;
+								&lt;th width="12.5%" data-filed="name"&gt;联系人&lt;/th&gt;
+								&lt;th width="15%" data-filed="phone"&gt;电话&lt;/th&gt;
+								&lt;th data-filed="notes"&gt;备注&lt;/th&gt;
+								&lt;th width="80" data-format="test1"&gt;操作&lt;/th&gt;
+							&lt;/tr&gt;
+						&lt;/thead&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;td&gt;&lt;input type="checkbox" name="checkView"&gt;&lt;/td&gt;
+								&lt;td&gt;1&lt;/td&gt;
+								&lt;td&gt;蜀山区&lt;/td&gt;
+								&lt;td&gt;张三&lt;/td&gt;
+								&lt;td&gt;13888888881&lt;/td&gt;
+								&lt;td&gt;无&lt;/td&gt;
+								&lt;td&gt;213&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td&gt;&lt;input type="checkbox" name="checkView"&gt;&lt;/td&gt;
+								&lt;td&gt;2&lt;/td&gt;
+								&lt;td&gt;蜀山区&lt;/td&gt;
+								&lt;td&gt;张三&lt;/td&gt;
+								&lt;td&gt;13888888881&lt;/td&gt;
+								&lt;td&gt;无&lt;/td&gt;
+								&lt;td&gt;213&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+        <p class="inp-desc">
+            描述：无请求数据表格。
+        </p>
+        <div class="inp-code" style="margin-left: 0;">
+            <span>e.g：ajax请求数据表格</span>
+            <table class="NUITable NUITableAjax" data-url="/data/table.json">
+				<thead>
+					<tr>
+						<th width="14"><input type="checkbox" name="checkView" class="SysCheckAll"></th>
+						<th width="9.6%">序号</th>
+						<th width="33%" data-filed="address">地址</th>
+						<th width="12.5%" data-filed="name">联系人</th>
+						<th width="15%" data-filed="phone">电话</th>
+						<th data-filed="notes">备注</th>
+						<th width="80" data-format="test1">操作</th>
+					</tr>
+				</thead>
+				<tbody>					
+				</tbody>
+			</table>
+            <pre class="inp-pre">
+            	&lt;table class="NUITable NUITableAjax" data-url="/data/table.json"&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th width="14"&gt;&lt;input type="checkbox" name="checkView" class="SysCheckAll"&gt;&lt;/th&gt;
+							&lt;th width="9.6%"&gt;序号&lt;/th&gt;
+							&lt;th width="33%" data-filed="address"&gt;地址&lt;/th&gt;
+							&lt;th width="12.5%" data-filed="name"&gt;联系人&lt;/th&gt;
+							&lt;th width="15%" data-filed="phone"&gt;电话&lt;/th&gt;
+							&lt;th data-filed="notes"&gt;备注&lt;/th&gt;
+							&lt;th width="80" data-format="test1"&gt;操作&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;					
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+            </pre>
+            <h3 class="btn-api">NUITableAjax</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="55">参数</th>
+                    <th width="30%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUITableAjax</td>
+                    <td>-</td>
+                    <td>申明该class表明使用框架表格数据渲染插件</td>
+                </tr>
+                <tr>
+                    <td>data-url</td>
+                    <td style="text-align: left;">是一个字符串,这个url即及请求后台表格数据的接口</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                 <tr>
+                    <td>data-filed</td>
+                    <td style="text-align: left;">是一个字符串，请求数据需要输出的属性</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>data-format</td>
+                    <td style="text-align: left;">是一个函数名的字符串, 后台自定义函数名;
+                    该函数有3个参数
+                    <p>arguments[0]: 当前行, 整行数据</p>
+                    <p>arguments[1]: 当前行tr jquery对象</p>
+                    <p>arguments[2]: 当前行该函数的td jquery对象</p>
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre>
+                    &lt;!DOCTYPE html>
+					&lt;html lang="en">
+					&lt;head>
+					    &lt;meta charset="UTF-8">
+					    &lt;title>NUI API&lt;/title>
+					    &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+					    &lt;link rel="stylesheet" type="text/css" href="css/style.css">&lt;/head>
+					&lt;body>
+					    &lt;div class="wrapper layout">
+					        &lt;a href="javascript:;" class="rescode">源码&lt;/a>
+					        &lt;h3 class="inp-title">NUITable&lt;/h3>
+					        &lt;div class="inp-demo clearfix">
+					            &lt;div class="inp-ep">
+					                &lt;span>e.g: 无请求数据表格&lt;/span>
+					                &lt;table class="NUITable">
+										&lt;thead>
+											&lt;tr>
+												&lt;th width="14">&lt;input type="checkbox" name="checkView" class="SysCheckAll">&lt;/th>
+												&lt;th width="9.6%">序号&lt;/th>
+												&lt;th width="33%" data-filed="address">地址&lt;/th>
+												&lt;th width="12.5%" data-filed="name">联系人&lt;/th>
+												&lt;th width="15%" data-filed="phone">电话&lt;/th>
+												&lt;th data-filed="notes">备注&lt;/th>
+												&lt;th width="80" data-format="test1">操作&lt;/th>
+											&lt;/tr>
+										&lt;/thead>
+										&lt;tbody>
+											&lt;tr>
+												&lt;td>&lt;input type="checkbox" name="checkView">&lt;/td>
+												&lt;td>1&lt;/td>
+												&lt;td>蜀山区&lt;/td>
+												&lt;td>张三&lt;/td>
+												&lt;td>13888888881&lt;/td>
+												&lt;td>无&lt;/td>
+												&lt;td>213&lt;/td>
+											&lt;/tr>
+											&lt;tr>
+												&lt;td>&lt;input type="checkbox" name="checkView">&lt;/td>
+												&lt;td>2&lt;/td>
+												&lt;td>蜀山区&lt;/td>
+												&lt;td>张三&lt;/td>
+												&lt;td>13888888881&lt;/td>
+												&lt;td>无&lt;/td>
+												&lt;td>213&lt;/td>
+											&lt;/tr>
+										&lt;/tbody>
+									&lt;/table>
+					            &lt;div class="inp-code" style="margin-top:30px;">
+					                &lt;span>代码：&lt;/span>
+					                &lt;pre class="inp-pre" style="display:block;">
+					                	&lt;table class="NUITable"&gt;
+											&lt;thead&gt;
+												&lt;tr&gt;
+													&lt;th width="14"&gt;&lt;input type="checkbox" name="checkView" class="SysCheckAll"&gt;&lt;/th&gt;
+													&lt;th width="9.6%"&gt;序号&lt;/th&gt;
+													&lt;th width="33%" data-filed="address"&gt;地址&lt;/th&gt;
+													&lt;th width="12.5%" data-filed="name"&gt;联系人&lt;/th&gt;
+													&lt;th width="15%" data-filed="phone"&gt;电话&lt;/th&gt;
+													&lt;th data-filed="notes"&gt;备注&lt;/th&gt;
+													&lt;th width="80" data-format="test1"&gt;操作&lt;/th&gt;
+												&lt;/tr&gt;
+											&lt;/thead&gt;
+											&lt;tbody&gt;
+												&lt;tr&gt;
+													&lt;td&gt;&lt;input type="checkbox" name="checkView"&gt;&lt;/td&gt;
+													&lt;td&gt;1&lt;/td&gt;
+													&lt;td&gt;蜀山区&lt;/td&gt;
+													&lt;td&gt;张三&lt;/td&gt;
+													&lt;td&gt;13888888881&lt;/td&gt;
+													&lt;td&gt;无&lt;/td&gt;
+													&lt;td&gt;213&lt;/td&gt;
+												&lt;/tr&gt;
+												&lt;tr&gt;
+													&lt;td&gt;&lt;input type="checkbox" name="checkView"&gt;&lt;/td&gt;
+													&lt;td&gt;2&lt;/td&gt;
+													&lt;td&gt;蜀山区&lt;/td&gt;
+													&lt;td&gt;张三&lt;/td&gt;
+													&lt;td&gt;13888888881&lt;/td&gt;
+													&lt;td&gt;无&lt;/td&gt;
+													&lt;td&gt;213&lt;/td&gt;
+												&lt;/tr&gt;
+											&lt;/tbody&gt;
+										&lt;/table&gt;
+					                &lt;/pre>
+					            &lt;/div>
+					        &lt;/div>
+					        &lt;p class="inp-desc">
+					            描述：无请求数据表格。
+					        &lt;/p>
+					        &lt;div class="inp-code" style="margin-left: 0;">
+					            &lt;span>e.g：ajax请求数据表格&lt;/span>
+					            &lt;table class="NUITable NUITableAjax" data-url="/data/table.json">
+									&lt;thead>
+										&lt;tr>
+											&lt;th width="14">&lt;input type="checkbox" name="checkView" class="SysCheckAll">&lt;/th>
+											&lt;th width="9.6%">序号&lt;/th>
+											&lt;th width="33%" data-filed="address">地址&lt;/th>
+											&lt;th width="12.5%" data-filed="name">联系人&lt;/th>
+											&lt;th width="15%" data-filed="phone">电话&lt;/th>
+											&lt;th data-filed="notes">备注&lt;/th>
+											&lt;th width="80" data-format="test1">操作&lt;/th>
+										&lt;/tr>
+									&lt;/thead>
+									&lt;tbody>					
+									&lt;/tbody>
+								&lt;/table>
+					            &lt;pre class="inp-pre">
+					            	&lt;table class="NUITable NUITableAjax" data-url="/data/table.json"&gt;
+										&lt;thead&gt;
+											&lt;tr&gt;
+												&lt;th width="14"&gt;&lt;input type="checkbox" name="checkView" class="SysCheckAll"&gt;&lt;/th&gt;
+												&lt;th width="9.6%"&gt;序号&lt;/th&gt;
+												&lt;th width="33%" data-filed="address"&gt;地址&lt;/th&gt;
+												&lt;th width="12.5%" data-filed="name"&gt;联系人&lt;/th&gt;
+												&lt;th width="15%" data-filed="phone"&gt;电话&lt;/th&gt;
+												&lt;th data-filed="notes"&gt;备注&lt;/th&gt;
+												&lt;th width="80" data-format="test1"&gt;操作&lt;/th&gt;
+											&lt;/tr&gt;
+										&lt;/thead&gt;
+										&lt;tbody&gt;					
+										&lt;/tbody&gt;
+									&lt;/table&gt;
+					            &lt;/pre>
+					            &lt;h3 class="btn-api">NUITableAjax&lt;/h3>
+					        &lt;table class="btn-table">
+					            &lt;thead>
+					                &lt;tr>
+					                    &lt;th width="15%">属性&lt;/th>
+					                    &lt;th width="55">参数&lt;/th>
+					                    &lt;th width="30%">说明&lt;/th>
+					                &lt;/tr>
+					            &lt;/thead>
+					            &lt;tbody>
+					                &lt;tr>
+					                    &lt;td>NUITableAjax&lt;/td>
+					                    &lt;td>-&lt;/td>
+					                    &lt;td>申明该class表明使用框架表格数据渲染插件&lt;/td>
+					                &lt;/tr>
+					                &lt;tr>
+					                    &lt;td>data-url&lt;/td>
+					                    &lt;td style="text-align: left;">是一个字符串,这个url即及请求后台表格数据的接口&lt;/td>
+					                    &lt;td>详细数据可参见demo示例中数据&lt;/td>
+					                &lt;/tr>
+					                 &lt;tr>
+					                    &lt;td>data-filed&lt;/td>
+					                    &lt;td style="text-align: left;">是一个字符串，请求数据需要输出的属性&lt;/td>
+					                    &lt;td>详细数据可参见demo示例中数据&lt;/td>
+					                &lt;/tr>
+					                &lt;tr>
+					                    &lt;td>data-format&lt;/td>
+					                    &lt;td style="text-align: left;">是一个函数名, 后台自定义函数名;
+					                    该函数有3个参数
+					                    &lt;p>arguments[0]: 当前行, 整行数据&lt;/p>
+					                    &lt;p>arguments[1]: 当前行tr jquery对象&lt;/p>
+					                    &lt;p>arguments[2]: 当前行该函数的td jquery对象&lt;/p>
+					                    &lt;/td>
+					                    &lt;td>详细数据可参见demo示例中数据)&lt;/td>
+					                &lt;/tr>
+					            &lt;/tbody>
+					        &lt;/table>
+					        &lt;/div>
+					        &lt;div class="htmlcode">
+					            &lt;h4 class="htmlcode-title">
+					                源码
+					                &lt;a href="javascript:;" class="htmlcode-close">关闭&lt;/a>
+					            &lt;/h4>
+					            &lt;div class="htmlcode-content">
+					                &lt;pre>
+					                    
+					                &lt;/pre>
+					            &lt;/div>
+					        &lt;/div>
+					    &lt;/div>
+
+					&lt;/body>
+					    &lt;script src="plugins/jquery.js">&lt;/script>
+					    &lt;script src="plugins/nui/NUI.min.js">&lt;/script>
+					    &lt;script src="js/common.js">&lt;/script>
+					&lt;/html>
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+    <script>
+    	function test1(d, $tr, $td){
+    		$td.html('我叫'+d.name);
+    	}
+    </script>
+</html>

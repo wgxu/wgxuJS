@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="plugins/nui/plugins/tree/zTreeStyle/zTreeStyle.css" type="text/css">
+</head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUITree插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: none;line-height: 30px;display:block;">示例:</span>
+               <ul class="ztree" id="sTree"></ul>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;">
+                    &lt;script&gt;
+                        var zNodes =[
+                            { name:"父节点1 - 展开", open:true,
+                                children: [
+                                    { name:"父节点11 - 折叠",
+                                        children: [
+                                            { name:"叶子节点111"},
+                                            { name:"叶子节点112"},
+                                            { name:"叶子节点113"},
+                                            { name:"叶子节点114"}
+                                        ]},
+                                    { name:"父节点12 - 折叠",
+                                        children: [
+                                            { name:"叶子节点121"},
+                                            { name:"叶子节点122"},
+                                            { name:"叶子节点123"},
+                                            { name:"叶子节点124"}
+                                        ]},
+                                    { name:"父节点13 - 没有子节点", isParent:true}
+                                ]},
+                            { name:"父节点2 - 折叠",
+                                children: [
+                                    { name:"父节点21 - 展开", open:true,
+                                        children: [
+                                            { name:"叶子节点211"},
+                                            { name:"叶子节点212"},
+                                            { name:"叶子节点213"},
+                                            { name:"叶子节点214"}
+                                        ]},
+                                    { name:"父节点22 - 折叠",
+                                        children: [
+                                            { name:"叶子节点221"},
+                                            { name:"叶子节点222"},
+                                            { name:"叶子节点223"},
+                                            { name:"叶子节点224"}
+                                        ]},
+                                    { name:"父节点23 - 折叠",
+                                        children: [
+                                            { name:"叶子节点231"},
+                                            { name:"叶子节点232"},
+                                            { name:"叶子节点233"},
+                                            { name:"叶子节点234"}
+                                        ]}
+                                ]},
+                            { name:"父节点3 - 没有子节点", isParent:true}
+                        ];
+                        <span style="color:#666;">// $.fn.zTree.init("#sTree", {}, zNodes);</span>
+                        NUI.NUITree.init($("#sTree"), {}, zNodes);
+                    &lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="searchINput-desc"> 
+            <span class="btn-codetext">说明：</span>
+            <h1 style="color: red;margin-bottom:15px">NUI.NUITree继承$.fn.zTree 所以调用方法和zTree一样 例<br />
+            <span style="line-height:16px;font-size:14px;font-weight:normal;text-shadow:0 0 2px rgba(0,0,0, .3);">$.fn.zTree.init("#sTree", {}, zNodes);<br />
+            NUI.NUITree.init($("#sTree"), {}, zNodes);</span></h1>
+            <p style="color: red;">使用树参见时需要已下几个要求：</p>
+            <p style="line-height: 20px; color: #000;">1、框架集成zTree插件，故在使用前，请先引入zTree的css和js文件。<br />路径：
+            <br/>&#12288;&#12288;&#12288;plugins/nui/plugins/tree/zTreeStyle/zTreeStyle.css
+            <br />&#12288;&#12288;&#12288;plugins/nui/plugins/tree/ztree.min.js (<span style="color:red;">需再NUI.min.js之前引入</span>)</p>
+            <p style="line-height: 20px; color: #000;">2、在树节点上需添加class="zTree"添加样式</p>
+            <p style="line-height: 20px; color: #000;">3、如果了解更多zTree规则，请<a href="./tree/demo/cn/index.html" target="_blank">点击这里</a></p>
+        </div>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff;color: #000;">
+                    $lt;!DOCTYPE html$gt;
+                    $lt;html lang="en"$gt;
+                    $lt;head$gt;
+                        $lt;meta charset="UTF-8"$gt;
+                        $lt;title$gt;NUI API$lt;/title$gt;
+                        $lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"$gt;
+                        $lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"$gt;
+                        $lt;link rel="stylesheet" type="text/css" href="css/style.css"$gt;
+                        $lt;link rel="stylesheet" href="plugins/nui/plugins/tree/zTreeStyle/zTreeStyle.css" type="text/css"$gt;
+                    $lt;/head$gt;
+                    $lt;body$gt;
+                        $lt;div class="wrapper layout"$gt;
+                            $lt;a href="javascript:;" class="rescode"$gt;源码$lt;/a$gt;
+                            $lt;h3 class="inp-title"$gt;NUITree插件$lt;/h3$gt;
+                            $lt;div class="inp-demo clearfix"$gt;
+                                $lt;div class="sel-eg clearfix"$gt;
+                                    $lt;span style="float: none;line-height: 30px;display:block;"$gt;示例:$lt;/span$gt;
+                                   $lt;ul class="ztree" id="sTree"$gt;$lt;/ul$gt;
+                                $lt;/div$gt;
+                                $lt;div class="sel-pre"$gt;
+                                    $lt;span class="btn-codetext"$gt;代码：$lt;/span$gt;
+                                    $lt;pre class="btn-pre" style="display: block;"$gt;
+                                        &lt;script&gt;
+                                            var zNodes =[
+                                                { name:"父节点1 - 展开", open:true,
+                                                    children: [
+                                                        { name:"父节点11 - 折叠",
+                                                            children: [
+                                                                { name:"叶子节点111"},
+                                                                { name:"叶子节点112"},
+                                                                { name:"叶子节点113"},
+                                                                { name:"叶子节点114"}
+                                                            ]},
+                                                        { name:"父节点12 - 折叠",
+                                                            children: [
+                                                                { name:"叶子节点121"},
+                                                                { name:"叶子节点122"},
+                                                                { name:"叶子节点123"},
+                                                                { name:"叶子节点124"}
+                                                            ]},
+                                                        { name:"父节点13 - 没有子节点", isParent:true}
+                                                    ]},
+                                                { name:"父节点2 - 折叠",
+                                                    children: [
+                                                        { name:"父节点21 - 展开", open:true,
+                                                            children: [
+                                                                { name:"叶子节点211"},
+                                                                { name:"叶子节点212"},
+                                                                { name:"叶子节点213"},
+                                                                { name:"叶子节点214"}
+                                                            ]},
+                                                        { name:"父节点22 - 折叠",
+                                                            children: [
+                                                                { name:"叶子节点221"},
+                                                                { name:"叶子节点222"},
+                                                                { name:"叶子节点223"},
+                                                                { name:"叶子节点224"}
+                                                            ]},
+                                                        { name:"父节点23 - 折叠",
+                                                            children: [
+                                                                { name:"叶子节点231"},
+                                                                { name:"叶子节点232"},
+                                                                { name:"叶子节点233"},
+                                                                { name:"叶子节点234"}
+                                                            ]}
+                                                    ]},
+                                                { name:"父节点3 - 没有子节点", isParent:true}
+                                            ];
+                                            $lt;span style="color:#666;"$gt;// $.fn.zTree.init("#sTree", {}, zNodes);$lt;/span$gt;
+                                            NUI.NUITree.init($("#sTree"), {}, zNodes);
+                                        &lt;/script&gt;
+                                    $lt;/pre$gt;
+                                $lt;/div$gt;
+                            $lt;/div$gt;
+                            $lt;div class="searchINput-desc"$gt; 
+                                $lt;span class="btn-codetext"$gt;说明：$lt;/span$gt;
+                                $lt;h1 style="color: red;margin-bottom:15px"$gt;NUI.NUITree继承$.fn.zTree 所以调用方法和zTree一样 例$lt;br /$gt;
+                                $lt;span style="line-height:16px;font-size:14px;font-weight:normal;text-shadow:0 0 2px rgba(0,0,0, .3);"$gt;$.fn.zTree.init("#sTree", {}, zNodes);$lt;br /$gt;
+                                NUI.NUITree.init($("#sTree"), {}, zNodes);$lt;/span$gt;$lt;/h1$gt;
+                                $lt;p style="color: red;"$gt;使用树参见时需要已下几个要求：$lt;/p$gt;
+                                $lt;p style="line-height: 20px; color: #000;"$gt;1、框架集成zTree插件，故在使用前，请先引入zTree的css和js文件。$lt;br /$gt;路径：
+                                $lt;br/$gt;&#12288;&#12288;&#12288;plugins/nui/plugins/tree/zTreeStyle/zTreeStyle.css
+                                $lt;br /$gt;&#12288;&#12288;&#12288;plugins/nui/plugins/tree/ztree.min.js ($lt;span style="color:red;"$gt;需再NUI.min.js之前引入$lt;/span$gt;)$lt;/p$gt;
+                                $lt;p style="line-height: 20px; color: #000;"$gt;2、在树节点上需添加class="zTree"添加样式$lt;/p$gt;
+                                $lt;p style="line-height: 20px; color: #000;"$gt;3、如果了解更多zTree规则，请$lt;a href="./tree/demo/cn/index.html" target="_blank"$gt;点击这里$lt;/a$gt;$lt;/p$gt;
+                            $lt;/div$gt;
+                            $lt;div class="htmlcode"$gt;
+                                $lt;h4 class="htmlcode-title"$gt;
+                                    源码
+                                    $lt;a href="javascript:;" class="htmlcode-close"$gt;关闭$lt;/a$gt;
+                                $lt;/h4$gt;
+                                $lt;div class="htmlcode-content"$gt;
+                                    $lt;pre style="background-color: #fff;color: #000;"$gt;                    
+                                    $lt;/pre$gt;
+                                $lt;/div$gt;
+                            $lt;/div$gt;
+                        $lt;/div$gt;
+                    $lt;/body$gt;
+                        $lt;script src="plugins/jquery.js"$gt;$lt;/script$gt;
+                        $lt;script src="plugins/nui/plugins/tree/ztree.min.js"$gt;$lt;/script$gt;
+                        $lt;script src="plugins/nui/NUI.min.js"$gt;$lt;/script$gt;
+                        $lt;script src="js/common.js"$gt;$lt;/script$gt;
+                    $lt;/html$gt;              
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/plugins/tree/ztree.min.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

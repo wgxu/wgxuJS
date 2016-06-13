@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUITab插件</h3>
+        <div class="inp-demo clearfix">
+            <div>
+                <span>示例:</span>
+                <div class="NUITabArea">
+                    <ul class="NUITab NUITabAction">
+                        <li class="active"><a href="javascript:void(0);">Tab1</a></li>
+                        <li><a href="javascript:void(0);">Tab2</a></li>
+                        <li><a href="javascript:void(0);">Tab3</a></li>
+                        <li><a href="javascript:void(0);">Tab4</a></li>
+                    </ul>
+                    <div class="NUITabCont">
+                        <div>Tab1</div>
+                        <div>Tab2</div>
+                        <div>Tab3</div>
+                        <div>Tab4</div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-code">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre">
+                    &lt;div class="NUITabArea"&gt;
+                        &lt;ul class="NUITab NUITabAction"&gt;
+                            &lt;li class="active"&gt;
+                                &lt;a href="javascript:void(0);"&gt;Tab1&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="javascript:void(0);"&gt;Tab2&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="javascript:void(0);"&gt;Tab3&lt;/a&gt;
+                            &lt;/li&gt;
+                            &lt;li&gt;
+                                &lt;a href="javascript:void(0);"&gt;Tab4&lt;/a&gt;
+                            &lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;div class="NUITabCont"&gt;
+                            &lt;div&gt;Tab1&lt;/div&gt;
+                            &lt;div&gt;Tab2&lt;/div&gt;
+                            &lt;div&gt;Tab3&lt;/div&gt;
+                            &lt;div&gt;Tab4&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </pre>
+            </div>
+        </div>
+        <h3 class="btn-api">NUITab API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="20">参数</th>
+                    <th width="65%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUITabArea</td>
+                    <td>-</td>
+                    <td>该类是NUITab插件的dom容器</td>
+                </tr>
+                <tr>
+                    <td>NUITab</td>
+                    <td>-</td>
+                    <td>申明NUITab类，即使用框架的样式</td>
+                </tr>
+                <tr>
+                    <td>NUITabAction</td>
+                    <td>-</td>
+                    <td>申明NUITabAction类，即使用NUI框架的交互</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="inp-desc btn-desc">
+            备注：<span style="color: red;">如使用NUITab插件，请务必保证使用demo的dom结构，否则插件不生效。</span>NUITab组件采用样式和交互分离的模式，即看最大化的根据用户需求来使用该框架，申明NUITab类，表明采用框架样式，申明NUITabAction类，表明使用框架的交互。如果两者都申明，则表明可以使用框架的样式和交互。
+        </p>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUITab插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div&gt;
+                                    &lt;span&gt;示例:&lt;/span&gt;
+                                    &lt;div class="NUITabArea"&gt;
+                                        &lt;ul class="NUITab NUITabAction"&gt;
+                                            &lt;li class="active"&gt;&lt;a href="javascript:void(0);"&gt;Tab1&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href="javascript:void(0);"&gt;Tab2&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href="javascript:void(0);"&gt;Tab3&lt;/a&gt;&lt;/li&gt;
+                                            &lt;li&gt;&lt;a href="javascript:void(0);"&gt;Tab4&lt;/a&gt;&lt;/li&gt;
+                                        &lt;/ul&gt;
+                                        &lt;div class="NUITabCont"&gt;
+                                            &lt;div&gt;Tab1&lt;/div&gt;
+                                            &lt;div&gt;Tab2&lt;/div&gt;
+                                            &lt;div&gt;Tab3&lt;/div&gt;
+                                            &lt;div&gt;Tab4&lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="btn-code"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre"&gt;
+                                        &lt;div class="NUITabArea"&gt;
+                                            &lt;ul class="NUITab NUITabAction"&gt;
+                                                &lt;li class="active"&gt;
+                                                    &lt;a href="javascript:void(0);"&gt;Tab1&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;li&gt;
+                                                    &lt;a href="javascript:void(0);"&gt;Tab2&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;li&gt;
+                                                    &lt;a href="javascript:void(0);"&gt;Tab3&lt;/a&gt;
+                                                &lt;/li&gt;
+                                                &lt;li&gt;
+                                                    &lt;a href="javascript:void(0);"&gt;Tab4&lt;/a&gt;
+                                                &lt;/li&gt;
+                                            &lt;/ul&gt;
+                                            &lt;div class="NUITabCont"&gt;
+                                                &lt;div&gt;Tab1&lt;/div&gt;
+                                                &lt;div&gt;Tab2&lt;/div&gt;
+                                                &lt;div&gt;Tab3&lt;/div&gt;
+                                                &lt;div&gt;Tab4&lt;/div&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="btn-api"&gt;NUITab API列表&lt;/h3&gt;
+                            &lt;table class="btn-table"&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th width="15%"&gt;属性&lt;/th&gt;
+                                        &lt;th width="20"&gt;参数&lt;/th&gt;
+                                        &lt;th width="65%"&gt;说明&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUITabArea&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;该类是NUITab插件的dom容器&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUITab&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明NUITab类，即使用框架的样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUITabAction&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明NUITabAction类，即使用NUI框架的交互&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+
+                            &lt;p class="inp-desc btn-desc"&gt;
+                                备注：NUITab组件采用样式和交互分离的模式，即看最大化的根据用户需求来使用该框架，申明NUITab类，表明采用框架样式，申明NUITabAction类，表明使用框架的交互。如果两者都申明，则表明可以使用框架的样式和交互
+                            &lt;/p&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

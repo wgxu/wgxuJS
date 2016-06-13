@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多级下拉框</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUILinkage插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;line-height: 30px;">多级下拉框联动示例:</span>
+                <div class="NUILinkage demo" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" ></div>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                    &lt;div class="NUILinkage demo" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" &gt;&lt;/div&gt;
+                </pre>
+            </div>
+        </div>
+         <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;line-height: 30px;">多级下拉框联动回显示例:</span>
+                <div class="NUILinkage" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" data-defaultVal="['1','2','3']"></div>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                   &lt;div class="NUILinkage" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" data-defaultVal="['1','2','3']"&gt;&lt;/div&gt;
+                </pre>
+            </div>
+        </div>
+        <h3 class="btn-api">NUILinkage API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="55">参数</th>
+                    <th width="30%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUILinkage</td>
+                    <td>-</td>
+                    <td>申明NUILinkage类就可以使用框架提供的多级下拉框组件</td>
+                </tr>
+                <tr>
+                    <td>data-url</td>
+                    <td style="text-align: left;">是一个数组字符串,每个url对应每个下拉框请求的接口，<span style="color: blue;">接口的数量和下框框的数量要保持一致，否则会报错。即使url都一样</span>。</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>data-name</td>
+                    <td style="text-align: left;">是一个数组字符串，每个列表元素对应每个select的name。<span style="color: blue;">name的数量和下框框的数量要保持一致，否则会报错。因为获取值的时候就是通过name来获取值得。$(selecetName).val();</span></td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                 <tr>
+                    <td>data-parmas</td>
+                    <td style="text-align: left;">是一个数组字符串，每个列表元素对应每个select的接口请求参数。第一个参树加数据，获取全部数据<span style="color: blue;">parmas的数量和下框框的数量要保持一致，否则会报错</span></td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>data-options</td>
+                    <td style="text-align: left;">
+                        <p>1、width(组件宽度)</p>
+                        <p>2、valueColor(字体颜色，默认黑色)</p>
+                        <p>3、ID(数据的key，如id，uuid等）</p>
+                        <p>4、value(数据的id对应的值，如北京、上海等）</p>
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+                <tr>
+                    <td>data-defaultVal</td>
+                    <td style="text-align: left;">
+                        该参数用户回显之前数据中的数据，是一个数组字符串，每个列表元素对应每个回显select的id值。<span style="color: blue;">回显列表的数量和下框框的数量要保持一致</span>
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;多级下拉框&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUILinkage插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;多级下拉框联动示例:&lt;/span&gt;
+                                    &lt;div class="NUILinkage demo" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" &gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                        &lt;div class="NUILinkage demo" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" &gt;&lt;/div&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                             &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;多级下拉框联动回显示例:&lt;/span&gt;
+                                    &lt;div class="NUILinkage" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" data-defaultVal="['1','2','3']"&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                       &lt;div class="NUILinkage" data-url="['./data/Linkage.json','./data/Linkage.json','./data/Linkage.json']" data-name = "['sheng','shi','xian']" data-parmas="[{id:0},'id','id']" data-options="{width:200,ID: 'ID',value: 'text'}" data-defaultVal="['1','2','3']"&gt;&lt;/div&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="btn-api"&gt;NUILinkage API列表&lt;/h3&gt;
+                            &lt;table class="btn-table"&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th width="15%"&gt;属性&lt;/th&gt;
+                                        &lt;th width="55"&gt;参数&lt;/th&gt;
+                                        &lt;th width="30%"&gt;说明&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUILinkage&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明NUILinkage类就可以使用框架提供的多级下拉框组件&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-url&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个数组字符串,每个url对应每个下拉框请求的接口，&lt;span style="color: blue;"&gt;接口的数量和下框框的数量要保持一致，否则会报错。即使url都一样&lt;/span&gt;。&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-name&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个数组字符串，每个列表元素对应每个select的name。&lt;span style="color: blue;"&gt;name的数量和下框框的数量要保持一致，否则会报错。因为获取值的时候就是通过name来获取值得。$(selecetName).val();&lt;/span&gt;&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                     &lt;tr&gt;
+                                        &lt;td&gt;data-parmas&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个数组字符串，每个列表元素对应每个select的接口请求参数。第一个参树加数据，获取全部数据&lt;span style="color: blue;"&gt;parmas的数量和下框框的数量要保持一致，否则会报错&lt;/span&gt;&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-options&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;
+                                            &lt;p&gt;1、width(组件宽度)&lt;/p&gt;
+                                            &lt;p&gt;2、valueColor(字体颜色，默认黑色)&lt;/p&gt;
+                                            &lt;p&gt;3、ID(数据的key，如id，uuid等）&lt;/p&gt;
+                                            &lt;p&gt;4、value(数据的id对应的值，如北京、上海等）&lt;/p&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-defaultVal&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;
+                                            该参数用户回显之前数据中的数据，是一个数组字符串，每个列表元素对应每个回显select的id值。&lt;span style="color: blue;"&gt;回显列表的数量和下框框的数量要保持一致&lt;/span&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

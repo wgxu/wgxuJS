@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/plugins/valideForm/Validform.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUIPages插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;line-height: 30px;">示例:</span>
+                <form class="NUIValidate" method="post" action="">
+                    <div class="valid-row">
+                        <span>姓名</span>
+                        <input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！">
+                    </div>
+                    <input type="submit" value="提交" class="BtnNormal BtnOk">
+                </form>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                &lt;form class="NUIValidate" method="post" action=""&gt;
+                    &lt;div class="valid-row"&gt;
+                        &lt;span&gt;姓名&lt;/span&gt;
+                        &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                    &lt;/div&gt;
+                    &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+                &lt;/form&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="searchINput-desc"> 
+            <span class="btn-codetext" style="color: red;">说明：</span>
+            <p style="color: red;">校验插件是集成validForm插件，所以使用方式保留了validForm的使用方式，使用校验时需要已下几个要求：</p>
+            <p style="line-height: 20px; color: #000;">1、框架集成validForm插件，故在使用校验前，请先引入validForm的css和js文件。路径：nui/plugins/validForm</p>
+            <p style="line-height: 20px; color: #000;">2、在form表单上申明NUIValidate类（见上面demo代码）,这样框架会扫描并自动加上校验</p>
+            <p style="line-height: 20px; color: #000;">3、在你需要校验的元素上加上datatype字段，框架对这个字段进行扫描并添加校验规则。该字段支持validForm预先定义的规则以及正则</p>
+            <p style="line-height: 20px; color: #000;">4、如果了解更多validForm规则，请<a href="./Validform/demo.html" target="_blank">点击这里</a></p>
+        </div>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff;color: #000;">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/plugins/valideForm/Validform.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUIPages插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;示例:&lt;/span&gt;
+                                    &lt;form class="NUIValidate" method="post" action=""&gt;
+                                        &lt;div class="valid-row"&gt;
+                                            &lt;span&gt;姓名&lt;/span&gt;
+                                            &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                                        &lt;/div&gt;
+                                        &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+                                    &lt;/form&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                    &lt;form class="NUIValidate" method="post" action=""&gt;
+                                        &lt;div class="valid-row"&gt;
+                                            &lt;span&gt;姓名&lt;/span&gt;
+                                            &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                                        &lt;/div&gt;
+                                        &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+                                    &lt;/form&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="searchINput-desc"&gt; 
+                                &lt;span class="btn-codetext" style="color: red;"&gt;说明：&lt;/span&gt;
+                                &lt;p style="color: red;"&gt;校验插件是集成validForm插件，所以使用方式保留了validForm的使用方式，使用校验时需要已下几个要求：&lt;/p&gt;
+                                &lt;p style="line-height: 20px; color: #000;"&gt;1、框架集成validForm插件，故在使用校验前，请先引入validForm的css和js文件。路径：nui/plugins/validForm&lt;/p&gt;
+                                &lt;p style="line-height: 20px; color: #000;"&gt;2、在form表单上申明NUIValidate类（见上面demo代码）,这样框架会扫描并自动加上校验&lt;/p&gt;
+                                &lt;p style="line-height: 20px; color: #000;"&gt;3、在你需要校验的元素上加上datatype字段，框架对这个字段进行扫描并添加校验规则。该字段支持validForm预先定义的规则以及正则&lt;/p&gt;
+                                &lt;p style="line-height: 20px; color: #000;"&gt;4、如果了解更多validForm规则，请&lt;a href="./Validform/demo.html" target="_blank"&gt;点击这里&lt;/a&gt;&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff;color: #000;"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/plugins/valideForm/Validform_v5.3.2_min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.js"></script>
+    <script src="plugins/nui/plugins/valideForm/Validform_v5.3.2_min.js"></script>
+    <script src="js/common.js"></script>
+</html>

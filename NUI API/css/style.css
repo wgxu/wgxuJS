@@ -1,0 +1,290 @@
+@charset ("utf-8");
+/*===common style start====*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    resize: none;
+    text-decoration: none;
+}
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden; 
+}
+.hide {
+    display: none;
+}
+html,
+body {
+    font-size: 12px;
+    height: 100%;
+    width: 100%;
+}
+.wrapper {
+    position: relative;
+}
+.header {
+    height: 60px;
+    background-color: #000;
+}
+.header img {
+    margin: 10px 10px 0 40px;
+    width: 40px;
+}
+.header span {
+    display: inline-block;
+    vertical-align: top;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 35px;
+}
+.content {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    bottom: 40px;
+}
+.frame-cont {
+    margin-left: 200px;
+    height: 100%;
+}
+.frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.slidermenu {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+.navlist {
+    list-style-type: none;
+    width: 100%;
+}
+.navlist li {
+    border-bottom: 1px solid #fff;
+}
+.navlist li a {
+    display: block;
+    width: 100%;
+    height: 39px;
+    line-height: 39px;
+    color: #717171;
+    text-align: center;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #eaeaea;
+    line-height: 40px;
+    color: #717171;
+}
+.layout {
+    padding: 0 50px;
+    width: auto;
+    font-size: 12px;
+    color: #717171;
+}
+.rescode {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    top: 70px;
+    right: 94px;
+    color: #000;
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000;
+}
+.htmlcode {
+    display: none;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+}
+.htmlcode-title {
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #e1e1e1;
+}
+.htmlcode-close {
+    margin-top: 5px;
+    float: right;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    color: #000;
+    background: #eee;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #000;
+}
+.htmlcode-content {
+    padding-top: 30px;
+}
+.htmlcode-content pre {
+    padding: 0;
+    margin:0;
+}
+.framewrapper {
+    height: 100%;
+    overflow: hidden;
+}
+/*===common style end====*/
+
+/*==== welcome ===== starat*/
+h3 {
+    font-weight: normal;
+}
+.wel-title {
+    margin-bottom: 40px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 25px;
+}
+.wel-version,
+.wel-desc {
+    line-height: 40px;
+}
+.wel-version .version {
+    font-size: 14px;
+}
+.wel-desc,
+.wel-maintain {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+/*==== welcome ===== end   */
+
+/*==== input plugin start == */
+.input {
+
+}
+.inp-title {
+    margin-bottom: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.inp-demo {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.inp-ep {
+    float: left;
+}
+.inp-code {
+    float: left;
+    margin-left: 20px;
+}
+.inp-pre {
+    display: inline-block;
+    line-height: 32px;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 40px;
+}
+.inp-desc {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+/*==== input plugin end   == */
+
+/*==== button start =========*/
+.btn-code {
+    margin-top: 20px;
+}
+.btn-codetext {
+    vertical-align: top;
+    display: inline-block;
+}
+.btn-pre {
+    display: inline-block;
+    line-height: 32px;
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 0 40px;
+}
+.btn-table {
+    margin-bottom: 20px;
+    width: 800px;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.btn-table th, 
+.btn-table td {
+    padding: 5px 0;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    color: #000;
+}
+.btn-api {
+    font-size: 15px;
+    line-height: 40px;
+    height: 40px;
+}
+.btn-desc {
+    margin-top: 20px;
+}
+.btn-code {
+    margin-bottom: 20px;
+}
+/*==== button end   =========*/
+
+/* ==== select start ========*/
+.sel-pre {
+    margin-top: 20px;
+}
+/* ==== select end ==========*/
+
+/*====searchInput start=====*/
+.searchINput-desc {
+    line-height: 20px;
+}
+/*====searchInput end  =====*/
+
+/*====== valitd start =======*/
+.valid-row {
+    margin: 20px 0;
+}
+/*====== valitd end   =======*/
+#download{
+    position:absolute;
+    top:5px;
+    right:40px;
+    font:normal 24px/40px cursive, arial;
+
+}
+#download a{
+    color:#FFF;
+}
+#download em{
+    font-size:12px;
+    vertical-align:super;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUIBtns插件</h3>
+        <div class="inp-demo clearfix">
+            <div>
+                <span>e.g:</span>
+                <button class="BtnNormal">默认</button>
+                <button class="BtnNormal BtnCancel">取消</button>
+                <button class="BtnNormal BtnOk">确定</button>
+                <button class="BtnNormal BtnDisabled">禁用</button>
+                <button class="BtnMin BtnNormal">默认(缩小)</button>
+                <button class="BtnMin BtnNormal BtnCancel">取消(缩小)</button>
+                <button class="BtnMin BtnNormal BtnOk">确定(缩小)</button>
+                <button class="BtnMin BtnNormal BtnDisabled">禁用(缩小)</button>
+            </div>
+            <div class="btn-code">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre">
+                    &lt;button class="BtnNormal"&gt;默认&lt;/button&gt;
+                    &lt;button class="BtnNormal BtnCancel"&gt;取消&lt;/button&gt;
+                    &lt;button class="BtnNormal BtnOk"&gt;确定&lt;/button&gt;
+                    &lt;button class="BtnNormal BtnDisabled"&gt;禁用&lt;/button&gt;
+                    &lt;button class="BtnMin BtnNormal"&gt;默认(缩小)&lt;/button&gt;
+                    &lt;button class="BtnMin BtnNormal BtnCancel"&gt;取消(缩小)&lt;/button&gt;
+                    &lt;button class="BtnMin BtnNormal BtnOk"&gt;确定(缩小)&lt;/button&gt;
+                    &lt;button class="BtnMin BtnNormal BtnDisabled"&gt;禁用(缩小)&lt;/button&gt;
+                </pre>
+            </div>
+        </div>
+        <h3 class="btn-api">NUI按钮API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="10%">属性</th>
+                    <th width="20">参数</th>
+                    <th width="70%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BtnCancel</td>
+                    <td>-</td>
+                    <td>NUI取消按钮样式</td>
+                </tr>
+                <tr>
+                    <td>BtnOk</td>
+                    <td>-</td>
+                    <td>NUI确定按钮样式</td>
+                </tr>
+                <tr>
+                    <td>BtnDisabled</td>
+                    <td>-</td>
+                    <td>NUI禁止按钮样式</td>
+                </tr>
+                <tr>
+                    <td>BtnMin</td>
+                    <td>-</td>
+                    <td>NUI缩小按钮样式</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="inp-desc btn-desc">
+            备注：按钮功能比较单一，框架没有进行交互设计，如demo所示，可以同时赋多个类来进行申明样式。如需对框架样式进行修改的话，请在类后面，添加自定义的class来进行样式控制。
+        </p>
+        <div class="inp-code btn-code" style="margin-left: 0;">
+            <span>e.g：</span>
+            <pre class="inp-pre">&lt;button class="BtnNormal BtnDisabled className"&gt;禁用&lt;/button&gt;</pre>
+        </div>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUIBtns插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div&gt;
+                                    &lt;span&gt;e.g:&lt;/span&gt;
+                                    &lt;button class="BtnNormal"&gt;默认&lt;/button&gt;
+                                    &lt;button class="BtnNormal BtnCancel"&gt;取消&lt;/button&gt;
+                                    &lt;button class="BtnNormal BtnOk"&gt;确定&lt;/button&gt;
+                                    &lt;button class="BtnNormal BtnDisabled"&gt;禁用&lt;/button&gt;
+                                    &lt;button class="BtnMin BtnNormal"&gt;默认(缩小)&lt;/button&gt;
+                                    &lt;button class="BtnMin BtnNormal BtnCancel"&gt;取消(缩小)&lt;/button&gt;
+                                    &lt;button class="BtnMin BtnNormal BtnOk"&gt;确定(缩小)&lt;/button&gt;
+                                    &lt;button class="BtnMin BtnNormal BtnDisabled"&gt;禁用(缩小)&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div class="btn-code"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre"&gt;
+                                        &lt;button class="BtnNormal"&gt;默认&lt;/button&gt;
+                                        &lt;button class="BtnNormal BtnCancel"&gt;取消&lt;/button&gt;
+                                        &lt;button class="BtnNormal BtnOk"&gt;确定&lt;/button&gt;
+                                        &lt;button class="BtnNormal BtnDisabled"&gt;禁用&lt;/button&gt;
+                                        &lt;button class="BtnMin BtnNormal"&gt;默认(缩小)&lt;/button&gt;
+                                        &lt;button class="BtnMin BtnNormal BtnCancel"&gt;取消(缩小)&lt;/button&gt;
+                                        &lt;button class="BtnMin BtnNormal BtnOk"&gt;确定(缩小)&lt;/button&gt;
+                                        &lt;button class="BtnMin BtnNormal BtnDisabled"&gt;禁用(缩小)&lt;/button&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="btn-api"&gt;NUI按钮API列表&lt;/h3&gt;
+                            &lt;table class="btn-table"&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th width="10%"&gt;属性&lt;/th&gt;
+                                        &lt;th width="20"&gt;参数&lt;/th&gt;
+                                        &lt;th width="70%"&gt;说明&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;BtnCancel&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;NUI取消按钮样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;BtnOk&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;NUI确定按钮样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;BtnDisabled&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;NUI禁止按钮样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;BtnMin&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;NUI缩小按钮样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+
+                            &lt;p class="inp-desc btn-desc"&gt;
+                                备注：按钮功能比较单一，框架没有进行交互设计，如需对框架样式进行修改的话，请在类后面，添加自定义的class来进行样式控制。
+                            &lt;/p&gt;
+                            &lt;div class="inp-code" style="margin-left: 0;"&gt;
+                                &lt;span&gt;e.g：&lt;/span&gt;
+                                &lt;pre class="inp-pre"&gt;&lt;button class="BtnNormal BtnDisabled className"&gt;禁用&lt;/button&gt;&lt;/pre&gt;
+                            &lt;/div&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre&gt;&lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

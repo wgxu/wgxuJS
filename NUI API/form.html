@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/plugins/valideForm/Validform.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUIValidate插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="display:block;line-height: 30px;">示例:</span>
+                <form class="NUIValidate" method="post" action="">
+                    <div class="valid-row">
+                        <span style="display:inline-block; width: 70px;">姓名:</span>
+                        <input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！">
+                    </div>
+                    <div class="valid-row clearfix">
+                        <span style="float: left; line-height: 30px;width: 70px;">性别:</span>
+                        <select class="NUISelect" datatype="*" nullmsg="请选择性别！">
+                            <option value="">--请选择--</option>
+                            <option value="1">男</option>
+                            <option value="2">女</option>
+                        </select>
+                    </div>
+                    <div class="valid-row clearfix">
+                        <span style="float: left; line-height: 30px;width: 70px;">岗位:</span>
+                        <label style="display: inline-block;line-height: 30px;"><input type="radio" name="job" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;">web开发</label>
+                        <label style="display: inline-block;line-height: 30px;"><input type="radio" name="job" style="vertical-align: middle;">java开发</label>
+                    </div>
+                    <div class="valid-row clearfix">
+                        <span style="float: left; line-height: 30px;width: 70px;">爱好:</span>
+                        <label style="display: inline-block;line-height: 30px;"><input type="checkbox" name="hobby" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;">篮球</label>
+                        <label style="display: inline-block;line-height: 30px;"><input type="checkbox" name="hobby" style="vertical-align: middle;">足球</label>
+                        <label style="display: inline-block;line-height: 30px;"><input type="checkbox" name="hobby" style="vertical-align: middle;">乒乓球</label>
+                    </div>
+                    <input type="submit" value="提交" class="BtnNormal BtnOk">
+                </form>
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                &lt;form class="NUIValidate" method="post" action=""&gt;
+                &lt;div class="valid-row"&gt;
+                    &lt;span style="display:inline-block; width: 70px;"&gt;姓名:&lt;/span&gt;
+                    &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                &lt;/div&gt;
+                &lt;div class="valid-row clearfix"&gt;
+                    &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;性别:&lt;/span&gt;
+                    &lt;select class="NUISelect" datatype="*" nullmsg="请选择性别！"&gt;
+                        &lt;option value=""&gt;--请选择--&lt;/option&gt;
+                        &lt;option value="1"&gt;男&lt;/option&gt;
+                        &lt;option value="2"&gt;女&lt;/option&gt;
+                    &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class="valid-row clearfix"&gt;
+                    &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;岗位:&lt;/span&gt;
+                    &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;web开发&lt;/label&gt;
+                    &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" style="vertical-align: middle;"&gt;java开发&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="valid-row clearfix"&gt;
+                    &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;爱好:&lt;/span&gt;
+                    &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;篮球&lt;/label&gt;
+                    &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;足球&lt;/label&gt;
+                    &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;乒乓球&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+            &lt;/form&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="searchINput-desc"> 
+            <span class="btn-codetext" style="color: red;">说明：这个举例说明了表单中常用的几个组件进行校验的demo</span>
+        </div>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff;color: #000;">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/plugins/valideForm/Validform.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUIValidate插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="display:block;line-height: 30px;"&gt;示例:&lt;/span&gt;
+                                    &lt;form class="NUIValidate" method="post" action=""&gt;
+                                        &lt;div class="valid-row"&gt;
+                                            &lt;span style="display:inline-block; width: 70px;"&gt;姓名:&lt;/span&gt;
+                                            &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="valid-row clearfix"&gt;
+                                            &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;性别:&lt;/span&gt;
+                                            &lt;select class="NUISelect" datatype="*" nullmsg="请选择性别！"&gt;
+                                                &lt;option value=""&gt;--请选择--&lt;/option&gt;
+                                                &lt;option value="1"&gt;男&lt;/option&gt;
+                                                &lt;option value="2"&gt;女&lt;/option&gt;
+                                            &lt;/select&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="valid-row clearfix"&gt;
+                                            &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;岗位:&lt;/span&gt;
+                                            &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;web开发&lt;/label&gt;
+                                            &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" style="vertical-align: middle;"&gt;java开发&lt;/label&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="valid-row clearfix"&gt;
+                                            &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;爱好:&lt;/span&gt;
+                                            &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;篮球&lt;/label&gt;
+                                            &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;足球&lt;/label&gt;
+                                            &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;乒乓球&lt;/label&gt;
+                                        &lt;/div&gt;
+                                        &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+                                    &lt;/form&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                    &lt;form class="NUIValidate" method="post" action=""&gt;
+                                    &lt;div class="valid-row"&gt;
+                                        &lt;span style="display:inline-block; width: 70px;"&gt;姓名:&lt;/span&gt;
+                                        &lt;input type="text" class="NUIInput" datatype="s2-4" nullmsg="请输入您的昵称！" errormsg="昵称至少2个字符,最4个字符！"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="valid-row clearfix"&gt;
+                                        &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;性别:&lt;/span&gt;
+                                        &lt;select class="NUISelect" datatype="*" nullmsg="请选择性别！"&gt;
+                                            &lt;option value=""&gt;--请选择--&lt;/option&gt;
+                                            &lt;option value="1"&gt;男&lt;/option&gt;
+                                            &lt;option value="2"&gt;女&lt;/option&gt;
+                                        &lt;/select&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="valid-row clearfix"&gt;
+                                        &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;岗位:&lt;/span&gt;
+                                        &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;web开发&lt;/label&gt;
+                                        &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="radio" name="job" style="vertical-align: middle;"&gt;java开发&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="valid-row clearfix"&gt;
+                                        &lt;span style="float: left; line-height: 30px;width: 70px;"&gt;爱好:&lt;/span&gt;
+                                        &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" datatype="*" nullmsg="请选择岗位！" style="vertical-align: middle;"&gt;篮球&lt;/label&gt;
+                                        &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;足球&lt;/label&gt;
+                                        &lt;label style="display: inline-block;line-height: 30px;"&gt;&lt;input type="checkbox" name="hobby" style="vertical-align: middle;"&gt;乒乓球&lt;/label&gt;
+                                    &lt;/div&gt;
+                                    &lt;input type="submit" value="提交" class="BtnNormal BtnOk"&gt;
+                                &lt;/form&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class="searchINput-desc"&gt; 
+                                &lt;span class="btn-codetext" style="color: red;"&gt;说明：这个举例说明了表单中常用的几个组件进行校验的demo&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff;color: #000;"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/plugins/valideForm/Validform_v5.3.2_min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.js"></script>
+    <script src="plugins/nui/plugins/valideForm/Validform_v5.3.2_min.js"></script>
+    <script src="js/common.js"></script>
+</html>

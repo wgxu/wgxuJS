@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUITable</h3>
+        <div class="inp-demo clearfix">
+            <div class="inp-ep" style="float:none;">
+                <span>e.g: 提示框</span>
+                <button id="btn1" class="BtnNormal BtnOk">点击弹出提示框</button>
+            </div>    
+            <div class="inp-code" style="margin-top:30px; float:none">
+                <span>代码：</span>
+                <pre class="inp-pre" style="display:block;">
+					&lt;script&gt;
+						$('#btn1').on('click', function(){
+					    	NUI.NUIArtTips({
+					    		width: 250,
+					    		height: 300,
+					    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+					    		ok: function(){
+					    			alert('只有确定按钮');
+					    		},
+					    		cancel: function(){
+					    			alert('你点击了取消');
+					    		}
+					    	});
+					    });
+					&lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="inp-demo clearfix">
+            <div class="inp-ep" style="float:none;">
+                <span>e.g: 确认框</span>
+                <button id="btn2" class="BtnNormal BtnOk">点击弹出确认</button>
+            </div>    
+            <div class="inp-code" style="margin-top:30px; float:none">
+                <span>代码：</span>
+                <pre class="inp-pre" style="display:block;">
+					&lt;script&gt;
+						$('#btn2').on('click', function(){
+					    	NUI.NUIArtSubmit({
+					    		width: 250,
+					    		height: 300,
+					    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+					    		ok: function(){
+					    			alert('只有确定按钮');
+					    		}
+					    	});
+					    });
+					&lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="inp-demo clearfix">
+            <div class="inp-ep" style="float:none;">
+                <span>e.g: iframe</span>
+                <button id="btn3" class="BtnNormal BtnOk">点击弹出iframe</button>
+            </div>    
+            <div class="inp-code" style="margin-top:30px; float:none">
+                <span>代码：</span>
+                <pre class="inp-pre" style="display:block;">
+					&lt;script&gt;
+						$('#btn3').on('click', function(){
+					    	NUI.HBArtIframe({
+					    		width: 250,
+					    		height: 300,
+					    		content: '/artDialog/HBDialog-iframe.html'
+					    	});
+					    });
+					&lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <div class="inp-demo clearfix">
+            <div class="inp-ep" style="float:none;">
+                <span>e.g: iframe</span>
+                <button id="btn4" class="BtnNormal BtnOk">点击弹出确认提示框</button>
+            </div>    
+            <div class="inp-code" style="margin-top:30px; float:none">
+                <span>代码：</span>
+                <pre class="inp-pre" style="display:block;">
+					&lt;script&gt;
+						$('#btn4').on('click', function(){
+					    	NUI.NUIArtTips({
+					    		width: 250,
+					    		height: 300,
+					    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+					    		ok: function(){
+					    			NUI.NUIArtSubmit({
+							    		width: 250,
+							    		height: 300,
+							    		content: '&lt;div style="300px;"&gt;我是html11&lt;/div&gt;',
+							    		ok: function(){
+							    			alert('只有确定按钮');
+							    		}
+							    	});
+					    		},
+					    		cancel: function(){
+					    			alert('你点击了取消');
+					    		}
+					    	});
+					    });
+					&lt;/script&gt;
+                </pre>
+            </div>
+        </div>
+        <h3 class="btn-api">NUIArtTips、NUIArtSubmit、HBArtIframe</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="55">参数</th>
+                    <th width="30%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" style="color:red;">需在NUI.min.js 之前引入 plugins/nui/plugins/dialog/dialog.js</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td>默认 auto, 可设置固定或百分比</td>
+                    <td>弹出框内容宽度</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td>同上</td>
+                    <td>弹出框内容高度</td>
+                </tr>
+                 <tr>
+                    <td>content</td>
+                    <td>一段 html 字符串</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>ok</td>
+                    <td>
+                    	回调函数, 点击确定之后触发
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+                <tr>
+                    <td>okVal</td>
+                    <td>
+                    	确定按钮名称默认值 确定
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+                <tr>
+                    <td>cancel</td>
+                    <td>
+                    	回调函数, 点击取消之后触发
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+                <tr>
+                    <td>cancelVal</td>
+                    <td>
+                    	取消按钮名称默认值 取消
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre>
+                	&lt;!DOCTYPE html&gt;
+					&lt;html lang="en"&gt;
+					&lt;head&gt;
+					    &lt;meta charset="UTF-8"&gt;
+					    &lt;title&gt;NUI API&lt;/title&gt;
+					    &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+					    &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+					&lt;body&gt;
+					    &lt;div class="wrapper layout"&gt;
+					        &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+					        &lt;h3 class="inp-title"&gt;NUITable&lt;/h3&gt;
+					        &lt;div class="inp-demo clearfix"&gt;
+					            &lt;div class="inp-ep" style="float:none;"&gt;
+					                &lt;span&gt;e.g: 提示框&lt;/span&gt;
+					                &lt;button id="btn1" class="BtnNormal BtnOk"&gt;点击弹出提示框&lt;/button&gt;
+					            &lt;/div&gt;    
+					            &lt;div class="inp-code" style="margin-top:30px; float:none"&gt;
+					                &lt;span&gt;代码：&lt;/span&gt;
+					                &lt;pre class="inp-pre" style="display:block;"&gt;
+										&lt;script&gt;
+											$('#btn1').on('click', function(){
+										    	NUI.NUIArtTips({
+										    		width: 250,
+										    		height: 300,
+										    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+										    		ok: function(){
+										    			alert('只有确定按钮');
+										    		},
+										    		cancel: function(){
+										    			alert('你点击了取消');
+										    		}
+										    	});
+										    });
+										&lt;/script&gt;
+					                &lt;/pre&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					        &lt;div class="inp-demo clearfix"&gt;
+					            &lt;div class="inp-ep" style="float:none;"&gt;
+					                &lt;span&gt;e.g: 确认框&lt;/span&gt;
+					                &lt;button id="btn2" class="BtnNormal BtnOk"&gt;点击弹出确认&lt;/button&gt;
+					            &lt;/div&gt;    
+					            &lt;div class="inp-code" style="margin-top:30px; float:none"&gt;
+					                &lt;span&gt;代码：&lt;/span&gt;
+					                &lt;pre class="inp-pre" style="display:block;"&gt;
+										&lt;script&gt;
+											$('#btn2').on('click', function(){
+										    	NUI.NUIArtSubmit({
+										    		width: 250,
+										    		height: 300,
+										    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+										    		ok: function(){
+										    			alert('只有确定按钮');
+										    		}
+										    	});
+										    });
+										&lt;/script&gt;
+					                &lt;/pre&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					        &lt;div class="inp-demo clearfix"&gt;
+					            &lt;div class="inp-ep" style="float:none;"&gt;
+					                &lt;span&gt;e.g: iframe&lt;/span&gt;
+					                &lt;button id="btn3" class="BtnNormal BtnOk"&gt;点击弹出iframe&lt;/button&gt;
+					            &lt;/div&gt;    
+					            &lt;div class="inp-code" style="margin-top:30px; float:none"&gt;
+					                &lt;span&gt;代码：&lt;/span&gt;
+					                &lt;pre class="inp-pre" style="display:block;"&gt;
+										&lt;script&gt;
+											$('#btn3').on('click', function(){
+										    	NUI.HBArtIframe({
+										    		width: 250,
+										    		height: 300,
+										    		content: '/artDialog/HBDialog-iframe.html'
+										    	});
+										    });
+										&lt;/script&gt;
+					                &lt;/pre&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					        &lt;div class="inp-demo clearfix"&gt;
+					            &lt;div class="inp-ep" style="float:none;"&gt;
+					                &lt;span&gt;e.g: iframe&lt;/span&gt;
+					                &lt;button id="btn4" class="BtnNormal BtnOk"&gt;点击弹出确认提示框&lt;/button&gt;
+					            &lt;/div&gt;    
+					            &lt;div class="inp-code" style="margin-top:30px; float:none"&gt;
+					                &lt;span&gt;代码：&lt;/span&gt;
+					                &lt;pre class="inp-pre" style="display:block;"&gt;
+										&lt;script&gt;
+											$('#btn4').on('click', function(){
+										    	NUI.NUIArtTips({
+										    		width: 250,
+										    		height: 300,
+										    		content: '&lt;div style="300px;"&gt;我是html&lt;/div&gt;',
+										    		ok: function(){
+										    			NUI.NUIArtSubmit({
+												    		width: 250,
+												    		height: 300,
+												    		content: '&lt;div style="300px;"&gt;我是html11&lt;/div&gt;',
+												    		ok: function(){
+												    			alert('只有确定按钮');
+												    		}
+												    	});
+										    		},
+										    		cancel: function(){
+										    			alert('你点击了取消');
+										    		}
+										    	});
+										    });
+										&lt;/script&gt;
+					                &lt;/pre&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					        &lt;h3 class="btn-api"&gt;NUIArtTips、NUIArtSubmit、HBArtIframe&lt;/h3&gt;
+					        &lt;table class="btn-table"&gt;
+					            &lt;thead&gt;
+					                &lt;tr&gt;
+					                    &lt;th width="15%"&gt;属性&lt;/th&gt;
+					                    &lt;th width="55"&gt;参数&lt;/th&gt;
+					                    &lt;th width="30%"&gt;说明&lt;/th&gt;
+					                &lt;/tr&gt;
+					            &lt;/thead&gt;
+					            &lt;tbody&gt;
+					                &lt;tr&gt;
+					                    &lt;td&gt;width&lt;/td&gt;
+					                    &lt;td&gt;默认 auto, 可设置固定或百分比&lt;/td&gt;
+					                    &lt;td&gt;弹出框内容宽度&lt;/td&gt;
+					                &lt;/tr&gt;
+					                &lt;tr&gt;
+					                    &lt;td&gt;height&lt;/td&gt;
+					                    &lt;td&gt;同上&lt;/td&gt;
+					                    &lt;td&gt;弹出框内容高度&lt;/td&gt;
+					                &lt;/tr&gt;
+					                 &lt;tr&gt;
+					                    &lt;td&gt;content&lt;/td&gt;
+					                    &lt;td&gt;一段 html 字符串&lt;/td&gt;
+					                    &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+					                &lt;/tr&gt;
+					                &lt;tr&gt;
+					                    &lt;td&gt;ok&lt;/td&gt;
+					                    &lt;td&gt;
+					                    	回调函数, 点击确定之后触发
+					                    &lt;/td&gt;
+					                    &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+					                &lt;/tr&gt;
+					                &lt;tr&gt;
+					                    &lt;td&gt;cancel&lt;/td&gt;
+					                    &lt;td&gt;
+					                    	回调函数, 点击取消之后触发
+					                    &lt;/td&gt;
+					                    &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+					                &lt;/tr&gt;
+					            &lt;/tbody&gt;
+					        &lt;/table&gt;
+					        &lt;div class="htmlcode"&gt;
+					            &lt;h4 class="htmlcode-title"&gt;
+					                源码
+					                &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+					            &lt;/h4&gt;
+					            &lt;div class="htmlcode-content"&gt;
+					                &lt;pre&gt;&lt;/pre&gt;
+					            &lt;/div&gt;
+					        &lt;/div&gt;
+					    &lt;/div&gt;
+					&lt;/body&gt;
+					    &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+					    &lt;script src="plugins/nui/plugins/dialog/dialog.js"&gt;&lt;/script&gt;
+					    &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+					    &lt;script src="js/common.js"&gt;&lt;/script&gt;
+					&lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/plugins/dialog/dialog.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>

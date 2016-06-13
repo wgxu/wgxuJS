@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NUI API</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=IE=edge">
+    <link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css"></head>
+<body>
+    <div class="wrapper layout">
+        <a href="javascript:;" class="rescode">源码</a>
+        <h3 class="inp-title">NUISearchInput插件</h3>
+        <div class="inp-demo clearfix">
+            <div class="sel-eg clearfix">
+                <span style="float: left;line-height: 30px;">示例:</span>
+                <input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}">
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre">
+                    &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}"&gt;
+                </pre>
+            </div>
+            <div class="sel-eg clearfix" style="margin-top: 20px;">
+                <span style="float: left;line-height: 30px;">回显示例:</span>
+                <input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}" data-defaultVal="北京市">
+            </div>
+            <div class="sel-pre">
+                <span class="btn-codetext">代码：</span>
+                <pre class="btn-pre" style="display: block;word-wrap: break-word;">
+                    &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}" data-defaultVal="北京市"&gt;
+                </pre>
+            </div>
+        </div>
+
+        <div class="searchINput-desc">
+            <span class="btn-codetext">说明：</span>
+            <p>该插件适用场景，匹配用户输入的内容，如果有则给与提示，如果没有则提示未匹配。类似于百度搜索框，因实时监控用户输入内容，所以对性能要求较多。请根据实际使用场景使用。</p>
+        </div>
+        <h3 class="btn-api">NUITab API列表</h3>
+        <table class="btn-table">
+            <thead>
+                <tr>
+                    <th width="15%">属性</th>
+                    <th width="55">参数</th>
+                    <th width="30%">说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NUISearchInput</td>
+                    <td>-</td>
+                    <td>申明该class表明仅使用搜索输入框的样式</td>
+                </tr>
+                <tr>
+                    <td>NUISearchAction</td>
+                    <td>-</td>
+                    <td>申明该class表明仅使用搜索框输入的交互</td>
+                </tr>
+                <tr>
+                    <td>data-url</td>
+                    <td style="text-align: left;">是一个字符串,这个url即匹配用户输入内容的接口</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                 <tr>
+                    <td>data-parmas</td>
+                    <td style="text-align: left;">是一个字符串，是搜索框传到后台的参数</td>
+                    <td>详细数据可参见demo示例中数据</td>
+                </tr>
+                <tr>
+                    <td>data-options</td>
+                    <td style="text-align: left;">
+                        <p>1、IDField(数据的key，如id，uuid等）</p>
+                        <p>2、textField(数据的id对应的值，如北京、上海等）</p>
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+                <tr>
+                    <td>data-defaultVal</td>
+                    <td style="text-align: left;">
+                       一个字符串，回显用户之前输入的字符串。
+                    </td>
+                    <td>详细数据可参见demo示例中数据)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="inp-desc btn-desc">
+            
+        </p>
+        <div class="htmlcode">
+            <h4 class="htmlcode-title">
+                源码
+                <a href="javascript:;" class="htmlcode-close">关闭</a>
+            </h4>
+            <div class="htmlcode-content">
+                <pre style="background-color: #fff;color: #000;">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;NUI API&lt;/title&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=IE=edge"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="plugins/nui/NUI.min.css"&gt;
+                        &lt;link rel="stylesheet" type="text/css" href="css/style.css"&gt;&lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;div class="wrapper layout"&gt;
+                            &lt;a href="javascript:;" class="rescode"&gt;源码&lt;/a&gt;
+                            &lt;h3 class="inp-title"&gt;NUISearchInput插件&lt;/h3&gt;
+                            &lt;div class="inp-demo clearfix"&gt;
+                                &lt;div class="sel-eg clearfix"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;示例:&lt;/span&gt;
+                                    &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}"&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre"&gt;
+                                        &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-eg clearfix" style="margin-top: 20px;"&gt;
+                                    &lt;span style="float: left;line-height: 30px;"&gt;回显示例:&lt;/span&gt;
+                                    &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}" data-defaultVal="北京市"&gt;
+                                &lt;/div&gt;
+                                &lt;div class="sel-pre"&gt;
+                                    &lt;span class="btn-codetext"&gt;代码：&lt;/span&gt;
+                                    &lt;pre class="btn-pre" style="display: block;word-wrap: break-word;"&gt;
+                                        &lt;input type="text" class="NUISearchInput NUISearchAction" data-url="./data/Linkage.json" data-params = "value" data-options="{IDField:'ID',textField: 'text'}" data-defaultVal="北京市"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+
+                            &lt;div class="searchINput-desc"&gt;
+                                &lt;span class="btn-codetext"&gt;说明：&lt;/span&gt;
+                                &lt;p&gt;该插件适用场景，匹配用户输入的内容，如果有则给与提示，如果没有则提示未匹配。类似于百度搜索框，因实时监控用户输入内容，所以对性能要求较多。请根据实际使用场景使用。&lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;h3 class="btn-api"&gt;NUITab API列表&lt;/h3&gt;
+                            &lt;table class="btn-table"&gt;
+                                &lt;thead&gt;
+                                    &lt;tr&gt;
+                                        &lt;th width="15%"&gt;属性&lt;/th&gt;
+                                        &lt;th width="55"&gt;参数&lt;/th&gt;
+                                        &lt;th width="30%"&gt;说明&lt;/th&gt;
+                                    &lt;/tr&gt;
+                                &lt;/thead&gt;
+                                &lt;tbody&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUISearchInput&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明该class表明仅使用搜索输入框的样式&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;NUISearchAction&lt;/td&gt;
+                                        &lt;td&gt;-&lt;/td&gt;
+                                        &lt;td&gt;申明该class表明仅使用搜索框输入的交互&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-url&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个字符串,这个url即匹配用户输入内容的接口&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                     &lt;tr&gt;
+                                        &lt;td&gt;data-parmas&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;是一个字符串，是搜索框传到后台的参数&lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-options&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;
+                                            &lt;p&gt;1、IDField(数据的key，如id，uuid等）&lt;/p&gt;
+                                            &lt;p&gt;2、textField(数据的id对应的值，如北京、上海等）&lt;/p&gt;
+                                        &lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                    &lt;tr&gt;
+                                        &lt;td&gt;data-defaultVal&lt;/td&gt;
+                                        &lt;td style="text-align: left;"&gt;
+                                           一个字符串，回显用户之前输入的字符串。
+                                        &lt;/td&gt;
+                                        &lt;td&gt;详细数据可参见demo示例中数据)&lt;/td&gt;
+                                    &lt;/tr&gt;
+                                &lt;/tbody&gt;
+                            &lt;/table&gt;
+
+                            &lt;p class="inp-desc btn-desc"&gt;
+                                
+                            &lt;/p&gt;
+                            &lt;div class="htmlcode"&gt;
+                                &lt;h4 class="htmlcode-title"&gt;
+                                    源码
+                                    &lt;a href="javascript:;" class="htmlcode-close"&gt;关闭&lt;/a&gt;
+                                &lt;/h4&gt;
+                                &lt;div class="htmlcode-content"&gt;
+                                    &lt;pre style="background-color: #fff"&gt;
+                                    &lt;/pre&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/body&gt;
+                        &lt;script src="plugins/jquery.js"&gt;&lt;/script&gt;
+                        &lt;script src="plugins/nui/NUI.min.js"&gt;&lt;/script&gt;
+                        &lt;script src="js/common.js"&gt;&lt;/script&gt;
+                    &lt;/html&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="plugins/jquery.js"></script>
+    <script src="plugins/nui/NUI.min.js"></script>
+    <script src="js/common.js"></script>
+</html>
