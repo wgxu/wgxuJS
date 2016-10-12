@@ -21,101 +21,28 @@
 		constructor: Axis,
 		//创建dom
 		_createDom: function() {
-			var s = this.opt.silde,
-				html;
-			if( s == 'both') {
-				html = this._bothSideDOm();
-			}else if(s == 'left') {
-				html = this._leftSideDom();
-			}else if(s == 'right') {
-				html = this._rightSideDom();
-			}else {
-				throw new Error("参数不正确");
-			}
-
+			var html = this._SideDOm();
 			this._render(html);
 		},
-		//左侧dom
-		_leftSideDom:function(){
+		//构建dom
+		_SideDOm: function(flag){
 			var html = '<ul>',
 				i = 0,
 				l = this.opt.data.length;　
 			for(; i < l; i++) {
 				var index = i%this.color.length,
 					item = this.opt.data[i],
-					arr = [
-						'<li class=" czflRht clearfix">',
-							'<div class="czfltime">',
-								'<div class="czfltimeWrap">',
-									'<p>'+ item.date +'</p>',
-									'<p>'+ item.time +'</p>',
-								'</div>',
-							'</div>',
-							'<div class="czflContItem '+ this.color[index] +'">',
-			                    '<div class="czflContItemWrap clearfix">',
-			                        '<p class="czflContItemHead '+(this.color[index] +"1")+'">',
-			                            '<span>'+ item.title +'</span>',
-			                        '</p>',
-			                        '<div class="czflContItemBody zcflgray">',
-			                            '<p>'+item.value+'</p>',
-			                       ' </div>',
-			                    '</div>',
-			                    '<i></i>',
-			               ' </div>',
-			            '</li>'
-					];
-			
-				html += arr.join("");	
-			}
-			html += '</ul>';
-			return html;
-		},
-		//右侧dom
-		_rightSideDom: function(){
-			var html = '',
-				i = 0,
-				l = this.opt.data.length;　
-			for(; i < l; i++) {
-				var index = i%this.color.length,
-					item = this.opt.data[i],
-					arr = [
-						'<ul><li class="czflLeft clearfix">',
-							'<div class="czfltime">',
-								'<div class="czfltimeWrap">',
-									'<p>'+item.date+'</p>',
-									'<p>'+item.time +'</p>',
-								'</div>',
-							'</div>',
-							'<div class="czflContItem '+ this.color[index] +'">',
-			                    '<div class="czflContItemWrap clearfix">',
-			                        '<p class="czflContItemHead '+(this.color[index] +"1")+'">',
-			                            '<span>'+item.title+'</span>',
-			                        '</p>',
-			                        '<div class="czflContItemBody zcflgray">',
-			                            '<p>'+ item.value +'</p>',
-			                       ' </div>',
-			                    '</div>',
-			                    '<i></i>',
-			               ' </div>',
-			            '</li>'
-					];
-			
-				html += arr.join("");	
-			}
-			html += '</ul>';
-			return html;
-		},
-		//双侧dom
-		_bothSideDOm: function(){
-			var html = '',
-				i = 0,
-				l = this.opt.data.length;　
-			for(; i < l; i++) {
-				var index = i%this.color.length,
-					item = this.opt.data[i],
+					s = this.opt.silde,
+					arr = [];
+					if(s == 'both') {
+						arr.push('<li class="'+ (i%2 == 0 ? 'czflLeft' : 'czflRht') +' clearfix">');
+					}else if(s == 'left' || s == 'right') {
+						arr.push('<li class="'+ (s == 'left' ? 'czflRht' : 'czflLeft') +' clearfix">');
+					}else {
+						throw new Error("silde传参错误");
+					}
 
-					arr = [
-						'<ul><li class="'+ (i%2 == 0 ? 'czflLeft' : 'czflRht') +' clearfix">',
+					var arrOther = [
 							'<div class="czfltime">',
 								'<div class="czfltimeWrap">',
 									'<p>'+item.date +'</p>',
@@ -135,6 +62,7 @@
 			               ' </div>',
 			            '</li>'
 					];
+					arr = arr.concat(arrOther);
 			
 				html += arr.join("");	
 			}
